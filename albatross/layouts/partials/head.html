@@ -11,6 +11,11 @@
 
         <!-- Make mobile pages responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- SCSS -->
+        {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) "includePaths" (slice "node_modules/myscss")) }}
+        {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen" />
     </head>
     <body>
 {{ partial "menu.html" . }}
