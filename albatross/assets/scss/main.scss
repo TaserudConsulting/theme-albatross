@@ -31,3 +31,82 @@ mark, audio, video {
 /*********************************************************************
  * LAYOUT
  */
+body {
+    line-height: 1.5;
+
+    /*****************************************************************
+     * NAVIGATION LAYOUT
+     */
+    nav {
+        text-align: center;
+        font-size: 0;
+        border-bottom: 1px solid black;
+
+        div.logo {
+            float: left;
+            font-size: 16px;
+        }
+
+        ul {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                float: left;
+                a {
+                    display: inline-block;
+
+                    font-size: 1.2rem;
+                    line-height: 3.4rem;
+                    padding-right: 1rem;
+                    padding-left: 1rem;
+
+                    &:hover {
+                        background: #cccccc;
+                    }
+                }
+            }
+        }
+    }
+    /*
+     * END NAVIGATION LAYOUT
+     ****************************************************************/
+
+    /*****************************************************************
+     * CONTENT LAYOUT
+     */
+    div.content {
+        text-align: center;
+
+        div.body {
+            text-align: left;
+            display: inline-block;
+            width: 500px;
+        }
+    }
+    /*
+     * END CONTENT LAYOUT
+     ****************************************************************/
+
+    /*****************************************************************
+     * ASIDE FOOTER LAYOUT
+     */
+    aside.footer {
+        text-align: center;
+
+        border-top: 1px solid black;
+
+        div.content {
+            display: inline-block;
+            width: 500px;
+        }
+    }
+    /*
+     * END ASIDE FOOTER LAYOUT
+     ****************************************************************/
+}
+/*
+ * END LAYOUT
+ ********************************************************************/
