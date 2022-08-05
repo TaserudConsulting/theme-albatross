@@ -1,4 +1,24 @@
 @import "lib/contrast";
+@import "theme-vars";
+
+/********************************************************************
+ * Helper mixins
+ */
+@mixin rem-attributes($name, $remSize) {
+    #{$name}: #{$fontSize * $remSize}px;
+    #{$name}: #{$remSize}rem;
+}
+
+// Mixins with the variables for the color themes.
+@mixin light-theme() {
+    --background-color: #{$lightBackgroundColor};
+    --foreground-color: #{$lightForegroundColor};
+}
+
+@mixin dark-theme() {
+    --background-color: #{$darkBackgroundColor};
+    --foreground-color: #{$darkForegroundColor};
+}
 
 /*********************************************************************
  * Apply a natural box layout model to all elements
@@ -33,6 +53,13 @@ mark, audio, video {
 /*********************************************************************
  * LAYOUT
  */
+html {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
 body {
     line-height: 1.5;
 
@@ -111,4 +138,23 @@ body {
 }
 /*
  * END LAYOUT
+ ********************************************************************/
+
+/*********************************************************************
+ * THEME
+ */
+:root {
+    --font-size: #{$fontSize}px;
+    --font-family: #{$fontFamily};
+
+    @include light-theme();
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include dark-theme();
+    }
+}
+/*
+ * END THEME
  ********************************************************************/
