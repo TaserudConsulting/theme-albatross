@@ -1,0 +1,64 @@
+{{ define "main" }}
+<div class="content">
+    <h1>{{ .Title }}</h1>
+    <p>
+        {{ .Content }}
+    </p>
+
+    {{ range $_, $menu := .Params.foodmenus }}
+    <div class="food-menu">
+        <h2>{{ $menu.title }}</h2>
+        <div class="items">
+            {{ range $_, $item := $menu.items }}
+            <div class="item">
+                <h3 class="title">
+                    {{ $item.name }}
+
+                    {{ if isset $item "flags" }}
+                    <span class="flags">
+                        {{ range $_, $flag := $item.flags }}
+                        <span class="flag {{ $flag }}"></span>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </h3>
+                {{ if isset $item "price" }}
+                <div class="price">{{ $item.price }}</div>
+                {{ end }}
+                {{ if or (isset $item "ingredients") (isset $item "allergens") }}
+                <div class="ingredients">
+                    {{ if isset $item "ingredients" }}
+                    <p>
+                        <!-- TODO: Set up i18n -->
+                        <strong>Ingredienser: </strong>{{ delimit $item.ingredients ", " }}
+                    </p>
+                    {{ end }}
+                    {{ if isset $item "allergens" }}
+                    <p>
+                        <!-- TODO: Set up i18n -->
+                        <strong>Allergener: </strong>{{ delimit $item.allergens ", " }}
+                    </p>
+                    {{ end }}
+                </div>
+                {{ end }}
+                <hr />
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    {{ if isset .Params "foodmenuflags" }}
+    <div class="food-menu-flags">
+        <!-- TODO: Set up i18n -->
+        Symbolbeskrivning:
+
+        <ul class="flags">
+            {{ range $flag, $description := .Params.foodmenuflags }}
+            <li><span class="flag {{ $flag }}"></span> - {{ $description }}</li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

@@ -13,6 +13,13 @@
 @mixin light-theme() {
     --background-color: #{$lightBackgroundColor};
     --foreground-color: #{$lightForegroundColor};
+
+    --food-menu-flags-vegan-background-color: #{$foodMenuFlagsVeganBackgroundColor};
+    --food-menu-flags-vegan-foreground-color: #{contrast-color($foodMenuFlagsVeganForegroundColor, $foodMenuFlagsVeganBackgroundColor)};
+    --food-menu-flags-vegetarian-background-color: #{$foodMenuFlagsVegetarianBackgroundColor};
+    --food-menu-flags-vegetarian-foreground-color: #{contrast-color($foodMenuFlagsVegetarianForegroundColor, $foodMenuFlagsVegetarianBackgroundColor)};
+    --food-menu-flags-gluten-free-background-color: #{$foodMenuFlagsGlutenFreeBackgroundColor};
+    --food-menu-flags-gluten-free-foreground-color: #{contrast-color($foodMenuFlagsGlutenFreeForegroundColor, $foodMenuFlagsGlutenFreeBackgroundColor)};
 }
 
 @mixin dark-theme() {
@@ -114,6 +121,82 @@ html {
                 text-align: left;
                 display: inline-block;
                 width: 500px;
+
+                /*****************************************************
+                 * BEGIN FOOD MENU LAYOUT
+                 */
+                div.food-menu, div.food-menu-flags {
+                    .flags span.flag {
+                        padding: 5px;
+                        margin: 5px;
+                        border-radius: 5px;
+
+                        &.vegan {
+                            background: var(--food-menu-flags-vegan-background-color);
+                            color: var(--food-menu-flags-vegan-foreground-color);
+
+                            &:before {
+                                content: 'V';
+                            }
+                        }
+
+                        &.vegetarian {
+                            background: var(--food-menu-flags-vegetarian-background-color);
+                            color: var(--food-menu-flags-vegetarian-foreground-color);
+
+                            &:before {
+                                content: 'VG';
+                            }
+                        }
+
+                        &.gluten-free {
+                            background: var(--food-menu-flags-gluten-free-background-color);
+                            color: var(--food-menu-flags-gluten-free-foreground-color);
+
+                            &:before {
+                                content: 'GF';
+                            }
+                        }
+                    }
+                }
+                div.food-menu {
+                    div.items div.item {
+                        display: inline-block;
+                        width: 100%;
+
+                        h3.title {
+                            float: left;
+
+                            span.flags {
+                                float: right;
+                            }
+                        }
+
+                        div.price {
+                            float: right;
+                        }
+
+                        div.ingredients {
+                            clear: both;
+                        }
+
+                        hr {
+                            clear: both;
+                        }
+                    }
+                }
+                div.food-menu-flags {
+                    ul {
+                        list-style: none;
+                        li {
+                            float: left;
+                            padding: 10px;
+                        }
+                    }
+                }
+                /*
+                 * END FOOD MENU LAYOUT
+                 ****************************************************/
             }
         }
         /*
