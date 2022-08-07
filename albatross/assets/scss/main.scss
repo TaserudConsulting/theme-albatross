@@ -51,90 +51,92 @@ mark, audio, video {
 }
 
 /*********************************************************************
- * LAYOUT
+ * BEGIN LAYOUT
  */
 html {
     background-color: var(--background-color);
     color: var(--foreground-color);
     font-family: var(--font-family);
     font-size: var(--font-size);
-}
 
-body {
-    line-height: 1.5;
+    body {
+        line-height: 1.5;
 
-    /*****************************************************************
-     * NAVIGATION LAYOUT
-     */
-    nav {
-        text-align: center;
-        font-size: 0;
-        border-bottom: 1px solid black;
+        /*************************************************************
+         * BEGIN NAVIGATION LAYOUT
+         */
+        header {
+            nav {
+                text-align: center;
+                font-size: 0;
+                border-bottom: 1px solid black;
 
-        div.logo {
-            float: left;
-            font-size: 16px;
-        }
+                div.logo {
+                    float: left;
+                    font-size: 16px;
+                }
 
-        ul {
-            display: inline-block;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-
-            li {
-                float: left;
-                a {
+                ul {
                     display: inline-block;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
 
-                    font-size: 1.2rem;
-                    line-height: 3.4rem;
-                    padding-right: 1rem;
-                    padding-left: 1rem;
+                    li {
+                        float: left;
+                        a {
+                            display: inline-block;
 
-                    &:hover {
-                        background: #cccccc;
+                            font-size: 1.2rem;
+                            line-height: 3.4rem;
+                            padding-right: 1rem;
+                            padding-left: 1rem;
+
+                            &:hover {
+                                background: #cccccc;
+                            }
+                        }
                     }
                 }
             }
         }
-    }
-    /*
-     * END NAVIGATION LAYOUT
-     ****************************************************************/
+        /*
+         * END NAVIGATION LAYOUT
+         ************************************************************/
 
-    /*****************************************************************
-     * CONTENT LAYOUT
-     */
-    div.content {
-        text-align: center;
+        /*************************************************************
+         * BEGIN CONTENT LAYOUT
+         */
+        div.wrapper {
+            text-align: center;
 
-        div.body {
-            text-align: left;
-            display: inline-block;
-            width: 500px;
+            div.content {
+                text-align: left;
+                display: inline-block;
+                width: 500px;
+            }
         }
-    }
-    /*
-     * END CONTENT LAYOUT
-     ****************************************************************/
+        /*
+         * END CONTENT LAYOUT
+         ************************************************************/
 
-    /*****************************************************************
-     * ASIDE FOOTER LAYOUT
-     */
-    aside.footer {
-        text-align: center;
+        /*************************************************************
+         * BEGIN FOOTER LAYOUT
+         */
+        footer.footer {
+            text-align: center;
 
-        border-top: 1px solid black;
+            border-top: 1px solid black;
 
-        div.content {
-            display: inline-block;
-            width: 500px;
+            div.content {
+                display: inline-block;
+                width: 500px;
+            }
         }
+        /*
+         * END FOOTER FOOTER LAYOUT
+         ************************************************************/
     }
-    /*
-     * END ASIDE FOOTER LAYOUT
-     ****************************************************************/
 }
 /*
  * END LAYOUT

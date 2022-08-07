@@ -1,8 +1,6 @@
-{{ partial "head.html" . }}
-        <div class="content container">
-            <div class="body">
-                <h1>{{ .Title }}</h1>
-                {{ .Content }}
-            </div>
-        </div>
-{{ partial "foot.html" . }}
+{{ define "main" }}
+<div class="content">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+</div>
+{{ end }}
