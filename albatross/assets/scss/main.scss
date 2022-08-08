@@ -125,6 +125,27 @@ html {
                 display: inline-block;
                 width: 500px;
 
+                h1 {
+                    @include rem-attributes('font-size', $fontSizeH1);
+                }
+
+                h2 {
+                    @include rem-attributes('font-size', $fontSizeH2);
+                }
+
+                h3 {
+                    @include rem-attributes('font-size', $fontSizeH3);
+                }
+
+                h4 {
+                    @include rem-attributes('font-size', $fontSizeH4);
+                }
+
+                > h1, > h2, > h3, > h4, > div, > p {
+                    @include rem-attributes('margin-top', 1);
+                    @include rem-attributes('margin-bottom', 1);
+                }
+
                 /*****************************************************
                  * BEGIN FOOD MENU LAYOUT
                  */
@@ -167,7 +188,7 @@ html {
                         display: inline-block;
                         width: 100%;
 
-                        h3.title {
+                        .title {
                             float: left;
 
                             span.flags {

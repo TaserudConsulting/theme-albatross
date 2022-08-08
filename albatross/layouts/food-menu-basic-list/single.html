@@ -11,7 +11,7 @@
         <div class="items">
             {{ range $_, $item := $menu.items }}
             <div class="item">
-                <h3 class="title">
+                <span class="title">
                     {{ $item.name }}
 
                     {{ if isset $item "flags" }}
@@ -21,7 +21,7 @@
                         {{ end }}
                     </span>
                     {{ end }}
-                </h3>
+                </span>
                 {{ if isset $item "price" }}
                 <div class="price">{{ $item.price }}</div>
                 {{ end }}
@@ -30,13 +30,13 @@
                     {{ if isset $item "ingredients" }}
                     <p>
                         <!-- TODO: Set up i18n -->
-                        <strong>Ingredienser: </strong>{{ delimit $item.ingredients ", " }}
+                        <span>Ingredienser:</span> {{ delimit $item.ingredients ", " }}
                     </p>
                     {{ end }}
                     {{ if isset $item "allergens" }}
                     <p>
                         <!-- TODO: Set up i18n -->
-                        <strong>Allergener: </strong>{{ delimit $item.allergens ", " }}
+                        <span>Allergener:</span> {{ delimit $item.allergens ", " }}
                     </p>
                     {{ end }}
                 </div>
