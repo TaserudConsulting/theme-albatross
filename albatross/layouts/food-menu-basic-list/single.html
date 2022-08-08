@@ -30,7 +30,7 @@
                     {{ if isset $item "ingredients" }}
                     <p>
                         <!-- TODO: Set up i18n -->
-                        <span>Ingredienser:</span> {{ delimit $item.ingredients ", " }}
+                        <span>Innehåller:</span> {{ delimit $item.ingredients ", " }}
                     </p>
                     {{ end }}
                     {{ if isset $item "allergens" }}
