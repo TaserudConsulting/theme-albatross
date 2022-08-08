@@ -8,9 +8,9 @@
     {{ range $_, $menu := .Params.foodmenus }}
     <div class="food-menu">
         <h2>{{ $menu.title }}</h2>
-        <div class="items">
+        <ul class="items">
             {{ range $_, $item := $menu.items }}
-            <div class="item">
+            <li class="item">
                 <span class="title">
                     {{ $item.name }}
 
@@ -41,10 +41,9 @@
                     {{ end }}
                 </div>
                 {{ end }}
-                <hr />
-            </div>
+            </li>
             {{ end }}
-        </div>
+        </ul>
     </div>
     {{ end }}
 

@@ -187,28 +187,30 @@ html {
                     }
                 }
                 div.food-menu {
-                    div.items div.item {
-                        display: inline-block;
-                        width: 100%;
+                    ul.items {
+                        list-style: none;
 
-                        .title {
-                            float: left;
+                        li.item {
+                            display: inline-block;
+                            width: 100%;
+                            @include rem-attributes('padding-top', 0.6);
+                            @include rem-attributes('padding-bottom', 0.6);
 
-                            span.flags {
+                            .title {
+                                float: left;
+
+                                span.flags {
+                                    float: right;
+                                }
+                            }
+
+                            div.price {
                                 float: right;
                             }
-                        }
 
-                        div.price {
-                            float: right;
-                        }
-
-                        div.ingredients {
-                            clear: both;
-                        }
-
-                        hr {
-                            clear: both;
+                            div.ingredients {
+                                clear: both;
+                            }
                         }
                     }
                 }
