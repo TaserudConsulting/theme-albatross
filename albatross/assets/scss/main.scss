@@ -14,6 +14,9 @@
     --background-color: #{$lightBackgroundColor};
     --foreground-color: #{$lightForegroundColor};
 
+    --font-size: #{$fontSize}px;
+    --font-family: #{$fontFamily};
+
     --food-menu-flags-vegan-background-color: #{$foodMenuFlagsVeganBackgroundColor};
     --food-menu-flags-vegan-foreground-color: #{contrast-color($foodMenuFlagsVeganForegroundColor, $foodMenuFlagsVeganBackgroundColor)};
     --food-menu-flags-vegetarian-background-color: #{$foodMenuFlagsVegetarianBackgroundColor};
@@ -229,9 +232,6 @@ html {
  * THEME
  */
 :root {
-    --font-size: #{$fontSize}px;
-    --font-family: #{$fontFamily};
-
     @include light-theme();
 }
 
