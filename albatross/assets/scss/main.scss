@@ -123,7 +123,8 @@ html {
             div.content {
                 text-align: left;
                 display: inline-block;
-                width: 500px;
+
+                @include rem-attributes('width', $pageContentWidthFactor);
 
                 h1 {
                     @include rem-attributes('font-size', $fontSizeH1);
@@ -239,7 +240,8 @@ html {
 
             div.content {
                 display: inline-block;
-                width: 500px;
+
+                @include rem-attributes('width', $pageContentWidthFactor);
             }
         }
         /*
