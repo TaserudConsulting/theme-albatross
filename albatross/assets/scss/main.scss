@@ -124,7 +124,7 @@ html {
                 text-align: left;
                 display: inline-block;
 
-                @include rem-attributes('width', $pageContentWidthFactor);
+                @include rem-attributes('max-width', $pageContentWidthFactor);
 
                 h1 {
                     @include rem-attributes('font-size', $fontSizeH1);
@@ -243,7 +243,7 @@ html {
             div.content {
                 display: inline-block;
 
-                @include rem-attributes('width', $pageContentWidthFactor);
+                @include rem-attributes('max-width', $pageContentWidthFactor);
             }
         }
         /*
