@@ -151,9 +151,11 @@ html {
                  */
                 div.food-menu, div.food-menu-flags {
                     .flags span.flag {
-                        padding: 5px;
-                        margin: 5px;
-                        border-radius: 5px;
+                        @include rem-attributes('padding', 0.3);
+                        @include rem-attributes('margin-left', 0.6);
+                        @include rem-attributes('margin-top', 0.3);
+                        @include rem-attributes('margin-bottom', 0.3);
+                        @include rem-attributes('border-radius', 0.3);
 
                         &.vegan {
                             background: var(--food-menu-flags-vegan-background-color);
@@ -214,7 +216,7 @@ html {
                         list-style: none;
                         li {
                             float: left;
-                            padding: 10px;
+                            @include rem-attributes('padding', 0.6);
                         }
                     }
                 }
