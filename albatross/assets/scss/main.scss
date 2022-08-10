@@ -151,37 +151,39 @@ html {
                  * BEGIN FOOD MENU LAYOUT
                  */
                 div.food-menu, div.food-menu-flags {
-                    .flags span.flag {
-                        @include rem-attributes('padding', 0.3);
-                        @include rem-attributes('margin-left', 0.6);
-                        @include rem-attributes('margin-top', 0.3);
-                        @include rem-attributes('margin-bottom', 0.3);
-                        @include rem-attributes('border-radius', 0.3);
+                    div.flags, ul.flags {
+                        @include rem-attributes('line-height', 3);
 
-                        &.vegan {
-                            background: var(--food-menu-flags-vegan-background-color);
-                            color: var(--food-menu-flags-vegan-foreground-color);
+                        span.flag {
+                            @include rem-attributes('padding', 0.3);
+                            @include rem-attributes('margin-left', 0.6);
+                            @include rem-attributes('border-radius', 0.3);
 
-                            &:before {
-                                content: 'V';
+                            &.vegan {
+                                background: var(--food-menu-flags-vegan-background-color);
+                                color: var(--food-menu-flags-vegan-foreground-color);
+
+                                &:before {
+                                    content: 'V';
+                                }
                             }
-                        }
 
-                        &.vegetarian {
-                            background: var(--food-menu-flags-vegetarian-background-color);
-                            color: var(--food-menu-flags-vegetarian-foreground-color);
+                            &.vegetarian {
+                                background: var(--food-menu-flags-vegetarian-background-color);
+                                color: var(--food-menu-flags-vegetarian-foreground-color);
 
-                            &:before {
-                                content: 'VG';
+                                &:before {
+                                    content: 'VG';
+                                }
                             }
-                        }
 
-                        &.gluten-free {
-                            background: var(--food-menu-flags-gluten-free-background-color);
-                            color: var(--food-menu-flags-gluten-free-foreground-color);
+                            &.gluten-free {
+                                background: var(--food-menu-flags-gluten-free-background-color);
+                                color: var(--food-menu-flags-gluten-free-foreground-color);
 
-                            &:before {
-                                content: 'GF';
+                                &:before {
+                                    content: 'GF';
+                                }
                             }
                         }
                     }
@@ -196,16 +198,20 @@ html {
                             @include rem-attributes('padding-top', 0.6);
                             @include rem-attributes('padding-bottom', 0.6);
 
-                            .title {
+                            span.title {
                                 float: left;
-
-                                span.flags {
-                                    float: right;
-                                }
+                                font-weight: bold;
+                                @include rem-attributes('font-size', 1.2);
                             }
 
-                            div.price {
+                            span.price {
                                 float: right;
+                                font-weight: bold;
+                                @include rem-attributes('font-size', 1.2);
+                            }
+
+                            div.flags {
+                                clear: both;
                             }
 
                             div.ingredients {

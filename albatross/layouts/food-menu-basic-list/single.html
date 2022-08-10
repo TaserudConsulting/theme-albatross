@@ -11,19 +11,9 @@
         <ul class="items">
             {{ range $_, $item := $menu.items }}
             <li class="item">
-                <span class="title">
-                    {{ $item.name }}
-
-                    {{ if isset $item "flags" }}
-                    <span class="flags">
-                        {{ range $_, $flag := $item.flags }}
-                        <span class="flag {{ $flag }}"></span>
-                        {{ end }}
-                    </span>
-                    {{ end }}
-                </span>
+                <span class="title">{{ $item.name }}</span>
                 {{ if isset $item "price" }}
-                <div class="price">{{ $item.price }}</div>
+                <span class="price">{{ $item.price }}</span>
                 {{ end }}
                 {{ if or (isset $item "ingredients") (isset $item "allergens") }}
                 <div class="ingredients">
@@ -41,6 +31,13 @@
                     {{ end }}
                 </div>
                 {{ end }}
+                {{ if isset $item "flags" }}
+                <div class="flags">
+                    {{ range $_, $flag := $item.flags }}
+                    <span class="flag {{ $flag }}"></span>
+                    {{ end }}
+                </div>
+                {{ end }}
             </li>
             {{ end }}
         </ul>
@@ -50,7 +47,7 @@
     {{ if isset .Params "foodmenuflags" }}
     <div class="food-menu-flags">
         <!-- TODO: Set up i18n -->
-        Symbolbeskrivning:
+        <h2>Symbolbeskrivning:</h2>
 
         <ul class="flags">
             {{ range $flag, $description := .Params.foodmenuflags }}
