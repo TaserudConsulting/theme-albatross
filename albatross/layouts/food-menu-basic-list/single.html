@@ -19,14 +19,12 @@
                 <div class="ingredients">
                     {{ if isset $item "ingredients" }}
                     <p>
-                        <!-- TODO: Set up i18n -->
-                        <span>Innehåller:</span> {{ delimit $item.ingredients ", " }}
+                        <span>{{ i18n "foodmenu-contains" }}</span> {{ delimit $item.ingredients ", " }}
                     </p>
                     {{ end }}
                     {{ if isset $item "allergens" }}
                     <p>
-                        <!-- TODO: Set up i18n -->
-                        <span>Allergener:</span> {{ delimit $item.allergens ", " }}
+                        <span>{{ i18n "foodmenu-allergens" }}</span> {{ delimit $item.allergens ", " }}
                     </p>
                     {{ end }}
                 </div>
@@ -46,8 +44,7 @@
 
     {{ if isset .Params "foodmenuflags" }}
     <div class="food-menu-flags">
-        <!-- TODO: Set up i18n -->
-        <h2>Symbolbeskrivning:</h2>
+        <h2>{{ i18n "foodmenu-symboldescriptions" }}</h2>
 
         <ul class="flags">
             {{ range $flag, $description := .Params.foodmenuflags }}

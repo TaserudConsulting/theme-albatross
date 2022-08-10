@@ -1,0 +1,14 @@
+404-page-not-found:
+  other: "404: Page not found"
+
+foodmenu-contains:
+  other: "Contains:"
+
+foodmenu-allergens:
+  other: "Allergens:"
+
+foodmenu-symboldescriptions:
+  other: "Symbol descriptions:"
+
+footer-made-by-weblizard:
+  other: "Made with ❤️ in Värmland by the WebLizard team."
