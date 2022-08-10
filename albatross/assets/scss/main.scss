@@ -12,7 +12,7 @@
 // Mixins with the variables for the color themes.
 @mixin light-theme() {
     --background-color: #{$lightBackgroundColor};
-    --foreground-color: #{$lightForegroundColor};
+    --foreground-color: #{contrast-color($lightForegroundColor, $lightBackgroundColor)};
 
     --font-size: #{$fontSize}px;
     --font-family: #{$fontFamily};
@@ -27,7 +27,7 @@
 
 @mixin dark-theme() {
     --background-color: #{$darkBackgroundColor};
-    --foreground-color: #{$darkForegroundColor};
+    --foreground-color: #{contrast-color($darkForegroundColor, $darkBackgroundColor)};
 }
 
 /*********************************************************************
