@@ -14,6 +14,11 @@
     --background-color: #{$lightBackgroundColor};
     --foreground-color: #{contrast-color($lightForegroundColor, $lightBackgroundColor)};
 
+    --menu-background: #{$lightMenuBackground};
+    --menu-foreground: #{contrast-color($lightMenuForeground, $lightMenuBackground)};
+    --menu-item-hover-background: #{$lightMenuItemHoverBackground};
+    --menu-item-hover-foreground: #{contrast-color($lightMenuItemHoverForeground, $lightMenuItemHoverBackground)};
+
     --font-size: #{$fontSize}px;
     --font-family: #{$fontFamily};
 
@@ -28,6 +33,11 @@
 @mixin dark-theme() {
     --background-color: #{$darkBackgroundColor};
     --foreground-color: #{contrast-color($darkForegroundColor, $darkBackgroundColor)};
+
+    --menu-background: #{$darkMenuBackground};
+    --menu-foreground: #{contrast-color($darkMenuForeground, $darkMenuBackground)};
+    --menu-item-hover-background: #{$darkMenuItemHoverBackground};
+    --menu-item-hover-foreground: #{contrast-color($darkMenuItemHoverForeground, $darkMenuItemHoverBackground)};
 }
 
 /*********************************************************************
@@ -80,6 +90,7 @@ html {
                 text-align: center;
                 font-size: 0;
                 border-bottom: 1px solid black;
+                background-color: var(--menu-background);
 
                 div.logo {
                     float: left;
@@ -97,13 +108,16 @@ html {
                         a {
                             display: inline-block;
 
+                            color: var(--menu-foreground);
+
                             font-size: 1.2rem;
                             line-height: 3.4rem;
                             padding-right: 1rem;
                             padding-left: 1rem;
 
                             &:hover {
-                                background: #cccccc;
+                                background-color: var(--menu-item-hover-background);
+                                color: var(--menu-item-hover-foreground);
                             }
                         }
                     }
