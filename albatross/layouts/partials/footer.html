@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="content">
         <p>
-            Copyright &copy; {{ .Site.Params.copyrightOwner }}.
+            Copyright &copy; {{ cond (isset .Site.Params "copyrightowner") .Site.Params.copyrightowner "2022 WebLizard" }}.
         </p>
         <p>
             Made with ❤️ in Värmland by the WebLizard team.
