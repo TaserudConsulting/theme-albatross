@@ -17,8 +17,11 @@
     # Specify formatter package for "nix fmt ." and "nix fmt . -- --check"
     formatter = pkgs.alejandra;
 
+    # Expose the version of hugo used to build the theme.
     packages.hugo = pkgs.hugo;
-    packages.theme = (pkgs.stdenv.mkDerivation {
+
+    # Expose the theme files.
+    packages.theme = pkgs.stdenv.mkDerivation {
       pname = "weblizard-theme-albatross";
       version = "0.0.0";
       src = ./src;
@@ -26,8 +29,27 @@
         mkdir $out
         cp -avr . $out
       '';
-    });
+    };
 
+    # A test case to see that the theme builds.
+    checks.test = pkgs.stdenv.mkDerivation {
+      pname = "weblizard-theme-albatross-test";
+      version = "0.0.0";
+      src = ./.;
+
+      buildInputs = [pkgs.hugo];
+
+      buildPhase = ''
+        cd test
+        hugo --logLevel debug
+      '';
+
+      installPhase = ''
+        cp -vr public/ $out
+      '';
+    };
+
+    # Dev shell tools.
     devShells.default = pkgs.mkShell {
       buildInputs = [
         pkgs.gnumake
