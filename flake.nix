@@ -17,8 +17,13 @@
     # Specify formatter package for "nix fmt ." and "nix fmt . -- --check"
     formatter = pkgs.alejandra;
 
-    # Expose the version of hugo used to build the theme.
-    packages.hugo = pkgs.hugo;
+    # Expose the version of hugo used to build the theme along with
+    # extra dependencies.
+    packages.hugo = pkgs.symlinkJoin {
+      name = "hugo";
+      paths = [pkgs.hugo];
+      meta.mainProgram = "hugo";
+    };
 
     # Expose the theme files.
     packages.theme = pkgs.stdenv.mkDerivation {
