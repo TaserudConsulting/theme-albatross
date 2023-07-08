@@ -1,5 +1,4 @@
 # Nix directories
-.direnv/
 result*
 
 # Test hugo build results

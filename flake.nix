@@ -38,7 +38,6 @@
       passthru.theme-name = "albatross";
 
       installPhase = ''
-        mkdir $out
         cp -avr . $out
       '';
     };
@@ -52,20 +51,12 @@
       buildInputs = [self.packages.${system}.hugo];
 
       buildPhase = ''
-        cd test
-        hugo --logLevel debug
+        cd test && hugo --logLevel debug
       '';
 
       installPhase = ''
         cp -vr public/ $out
       '';
-    };
-
-    # Dev shell tools.
-    devShells.default = pkgs.mkShell {
-      buildInputs = [
-        pkgs.gnumake
-      ];
     };
   }));
 }
