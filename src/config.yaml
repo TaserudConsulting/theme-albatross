@@ -1,0 +1,52 @@
+baseURL: /
+title: Albatross theme - WebLizard
+defaultContentLanguage: sv
+theme: albatross
+
+disableKinds:
+  - taxonomy
+  - term
+
+params:
+  copyrightOwner: 2022 WebLizard Albatross
+
+  style:
+    # Base font size in px
+    font-size: 18
+
+    # Page content width factor
+    page-content-width-factor: 42
+
+    # Font size for different elements in rems
+    font-size-h1: 1.8
+    font-size-h2: 1.6
+    font-size-h3: 1.4
+    font-size-h4: 1.2
+
+    # Font family
+    font-family: sans
+
+    # Colors
+    light-background-color: '#ffffff' # white
+    light-foreground-color: '#000000' # black
+    dark-background-color: '#171717' # dark gray
+    dark-foreground-color: '#ffffff' # white
+
+    # Menu item colors
+    light-menu-background: 'darken(#ffffff, 5%)'
+    light-menu-foreground: '#000000' # black
+    light-menu-item-hover-background: 'darken(#ffffff, 10%)'
+    light-menu-item-hover-foreground: '#000000' # black
+
+    dark-menu-background: 'lighten(#171717, 5%)'
+    dark-menu-foreground: '#ffffff' # white
+    dark-menu-item-hover-background: 'lighten(#171717, 10%)'
+    dark-menu-item-hover-foreground: '#ffffff' # white
+
+    # Food menu flags
+    food-menu-flags-vegan-background-color: '#006400' # darkgreen
+    food-menu-flags-vegan-foreground-color: '#ffffff' # white
+    food-menu-flags-vegetarian-background-color: '#006400' # darkgreen
+    food-menu-flags-vegetarian-foreground-color: '#ffffff' # white
+    food-menu-flags-gluten-free-background-color: '#715000' # Dark yellowish
+    food-menu-flags-gluten-free-foreground-color: '#ffffff' # white

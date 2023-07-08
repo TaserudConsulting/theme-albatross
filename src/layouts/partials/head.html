@@ -12,6 +12,7 @@
 
     <!-- SCSS -->
     {{ $options := (dict "targetPath" "css/style.css"
+                         "vars" site.Params.style
                          "transpiler" "dartsass"
                          "outputStyle" "compressed"
                          "enableSourceMap" (not hugo.IsProduction)

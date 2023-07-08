@@ -3,13 +3,6 @@ title: Albatross test page - WebLizard
 defaultContentLanguage: sv
 theme: albatross
 
-params:
-  copyrightOwner: 2022 WebLizard Albatross
-
-disableKinds:
-  - taxonomy
-  - term
-
 languages:
   sv:
     languageCode: sv-se

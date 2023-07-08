@@ -1,43 +1,43 @@
+@use "hugo:vars" as h;
 @import "lib/contrast";
-@import "theme-vars";
 
 /********************************************************************
  * Helper mixins
  */
 @mixin rem-attributes($name, $remSize) {
-    #{$name}: #{$fontSize * $remSize}px;
+    #{$name}: #{h.$font-size * $remSize}px;
     #{$name}: #{$remSize}rem;
 }
 
 // Mixins with the variables for the color themes.
 @mixin light-theme() {
-    --background-color: #{$lightBackgroundColor};
-    --foreground-color: #{contrast-color($lightForegroundColor, $lightBackgroundColor)};
+    --background-color: #{h.$light-background-color};
+    --foreground-color: #{contrast-color(h.$light-foreground-color, h.$light-background-color)};
 
-    --menu-background: #{$lightMenuBackground};
-    --menu-foreground: #{contrast-color($lightMenuForeground, $lightMenuBackground)};
-    --menu-item-hover-background: #{$lightMenuItemHoverBackground};
-    --menu-item-hover-foreground: #{contrast-color($lightMenuItemHoverForeground, $lightMenuItemHoverBackground)};
+    --menu-background: #{h.$light-menu-background};
+    --menu-foreground: #{contrast-color(h.$light-menu-foreground, h.$light-menu-background)};
+    --menu-item-hover-background: #{h.$light-menu-item-hover-background};
+    --menu-item-hover-foreground: #{contrast-color(h.$light-menu-item-hover-foreground, h.$light-menu-item-hover-background)};
 
-    --font-size: #{$fontSize}px;
-    --font-family: #{$fontFamily};
+    --font-size: #{h.$font-size}px;
+    --font-family: #{h.$font-family};
 
-    --food-menu-flags-vegan-background-color: #{$foodMenuFlagsVeganBackgroundColor};
-    --food-menu-flags-vegan-foreground-color: #{contrast-color($foodMenuFlagsVeganForegroundColor, $foodMenuFlagsVeganBackgroundColor)};
-    --food-menu-flags-vegetarian-background-color: #{$foodMenuFlagsVegetarianBackgroundColor};
-    --food-menu-flags-vegetarian-foreground-color: #{contrast-color($foodMenuFlagsVegetarianForegroundColor, $foodMenuFlagsVegetarianBackgroundColor)};
-    --food-menu-flags-gluten-free-background-color: #{$foodMenuFlagsGlutenFreeBackgroundColor};
-    --food-menu-flags-gluten-free-foreground-color: #{contrast-color($foodMenuFlagsGlutenFreeForegroundColor, $foodMenuFlagsGlutenFreeBackgroundColor)};
+    --food-menu-flags-vegan-background-color: #{h.$food-menu-flags-vegan-background-color};
+    --food-menu-flags-vegan-foreground-color: #{contrast-color(h.$food-menu-flags-vegan-foreground-color, h.$food-menu-flags-vegan-background-color)};
+    --food-menu-flags-vegetarian-background-color: #{h.$food-menu-flags-vegetarian-background-color};
+    --food-menu-flags-vegetarian-foreground-color: #{contrast-color(h.$food-menu-flags-vegetarian-foreground-color, h.$food-menu-flags-vegetarian-background-color)};
+    --food-menu-flags-gluten-free-background-color: #{h.$food-menu-flags-gluten-free-background-color};
+    --food-menu-flags-gluten-free-foreground-color: #{contrast-color(h.$food-menu-flags-gluten-free-foreground-color, h.$food-menu-flags-gluten-free-background-color)};
 }
 
 @mixin dark-theme() {
-    --background-color: #{$darkBackgroundColor};
-    --foreground-color: #{contrast-color($darkForegroundColor, $darkBackgroundColor)};
+    --background-color: #{h.$dark-background-color};
+    --foreground-color: #{contrast-color(h.$dark-foreground-color, h.$dark-background-color)};
 
-    --menu-background: #{$darkMenuBackground};
-    --menu-foreground: #{contrast-color($darkMenuForeground, $darkMenuBackground)};
-    --menu-item-hover-background: #{$darkMenuItemHoverBackground};
-    --menu-item-hover-foreground: #{contrast-color($darkMenuItemHoverForeground, $darkMenuItemHoverBackground)};
+    --menu-background: #{h.$dark-menu-background};
+    --menu-foreground: #{contrast-color(h.$dark-menu-foreground, h.$dark-menu-background)};
+    --menu-item-hover-background: #{h.$dark-menu-item-hover-background};
+    --menu-item-hover-foreground: #{contrast-color(h.$dark-menu-item-hover-foreground, h.$dark-menu-item-hover-background)};
 }
 
 /*********************************************************************
@@ -138,22 +138,22 @@ html {
                 text-align: left;
                 display: inline-block;
 
-                @include rem-attributes('max-width', $pageContentWidthFactor);
+                @include rem-attributes('max-width', h.$page-content-width-factor);
 
                 h1 {
-                    @include rem-attributes('font-size', $fontSizeH1);
+                    @include rem-attributes('font-size', h.$font-size-h1);
                 }
 
                 h2 {
-                    @include rem-attributes('font-size', $fontSizeH2);
+                    @include rem-attributes('font-size', h.$font-size-h2);
                 }
 
                 h3 {
-                    @include rem-attributes('font-size', $fontSizeH3);
+                    @include rem-attributes('font-size', h.$font-size-h3);
                 }
 
                 h4 {
-                    @include rem-attributes('font-size', $fontSizeH4);
+                    @include rem-attributes('font-size', h.$font-size-h4);
                 }
 
                 > h1, > h2, > h3, > h4, > div, > p {
@@ -263,7 +263,7 @@ html {
             div.content {
                 display: inline-block;
 
-                @include rem-attributes('max-width', $pageContentWidthFactor);
+                @include rem-attributes('max-width', h.$page-content-width-factor);
             }
         }
         /*
