@@ -25,6 +25,9 @@
       pname = "weblizard-theme-albatross";
       version = "0.0.0";
       src = ./src;
+
+      passthru.theme-name = "albatross";
+
       installPhase = ''
         mkdir $out
         cp -avr . $out
