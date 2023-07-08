@@ -1,4 +1,4 @@
 .PHONY: test
 
 test:
-	cd test && hugo --logLevel debug
+	cd test && nix run .#hugo -- --logLevel debug

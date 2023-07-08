@@ -20,8 +20,12 @@
     # Expose the version of hugo used to build the theme along with
     # extra dependencies.
     packages.hugo = pkgs.symlinkJoin {
-      name = "hugo";
-      paths = [pkgs.hugo];
+      name = "hugo-dart-sass-bundle";
+      paths = [pkgs.hugo pkgs.dart-sass-embedded];
+      buildInputs = [pkgs.makeWrapper];
+      postBuild = ''
+        wrapProgram "$out/bin/hugo" --prefix PATH : "${pkgs.dart-sass-embedded}"/bin
+      '';
       meta.mainProgram = "hugo";
     };
 
@@ -45,7 +49,7 @@
       version = "0.0.0";
       src = ./.;
 
-      buildInputs = [pkgs.hugo];
+      buildInputs = [self.packages.${system}.hugo];
 
       buildPhase = ''
         cd test
@@ -61,7 +65,6 @@
     devShells.default = pkgs.mkShell {
       buildInputs = [
         pkgs.gnumake
-        pkgs.hugo
       ];
     };
   }));

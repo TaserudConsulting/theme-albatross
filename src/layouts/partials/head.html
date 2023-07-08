@@ -12,6 +12,7 @@
 
     <!-- SCSS -->
     {{ $options := (dict "targetPath" "css/style.css"
+                         "transpiler" "dartsass"
                          "outputStyle" "compressed"
                          "enableSourceMap" (not hugo.IsProduction)
                          "includePaths" (slice "node_modules/myscss")) }}
