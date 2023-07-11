@@ -10,6 +10,9 @@
     <!-- Make mobile pages responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ .Site.Params.iconPath | absURL }}" />
+
     <!-- SCSS -->
     {{ $options := (dict "targetPath" "css/style.css"
                          "vars" site.Params.style

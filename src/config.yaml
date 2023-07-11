@@ -10,6 +10,10 @@ disableKinds:
 params:
   copyrightOwner: 2022 WebLizard Albatross
 
+  # Logo and icon to display
+  logoPath: /img/albatross_logo.png
+  iconPath: /img/albatross_icon.png
+
   style:
     # Base font size in px
     font-size: 18
