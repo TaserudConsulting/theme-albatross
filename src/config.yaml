@@ -31,20 +31,20 @@ params:
     font-family: sans
 
     # Colors
-    light-background-color: '#ffffff' # white
+    light-background-color: '#fbf9fa' # light light blue
     light-foreground-color: '#000000' # black
-    dark-background-color: '#171717' # dark gray
+    dark-background-color: '#2a2c31' # dark blue gray
     dark-foreground-color: '#ffffff' # white
 
     # Menu item colors
-    light-menu-background: 'darken(#ffffff, 5%)'
+    light-menu-background: '#e5e6ec' # light blue
     light-menu-foreground: '#000000' # black
-    light-menu-item-hover-background: 'darken(#ffffff, 10%)'
+    light-menu-item-hover-background: 'darken(#e5e6ec, 5%)'
     light-menu-item-hover-foreground: '#000000' # black
 
-    dark-menu-background: 'lighten(#171717, 5%)'
+    dark-menu-background: '#27373f' # dark blue gray
     dark-menu-foreground: '#ffffff' # white
-    dark-menu-item-hover-background: 'lighten(#171717, 10%)'
+    dark-menu-item-hover-background: 'lighten(#27373f, 5%)'
     dark-menu-item-hover-foreground: '#ffffff' # white
 
     # Food menu flags
@@ -52,5 +52,5 @@ params:
     food-menu-flags-vegan-foreground-color: '#ffffff' # white
     food-menu-flags-vegetarian-background-color: '#006400' # darkgreen
     food-menu-flags-vegetarian-foreground-color: '#ffffff' # white
-    food-menu-flags-gluten-free-background-color: '#715000' # Dark yellowish
+    food-menu-flags-gluten-free-background-color: '#f6d563' # Dark yellowish
     food-menu-flags-gluten-free-foreground-color: '#ffffff' # white
