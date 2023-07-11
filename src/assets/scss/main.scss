@@ -269,6 +269,11 @@ html {
                 display: inline-block;
 
                 @include rem-attributes('max-width', h.$page-content-width-factor);
+
+                p {
+                    @include rem-attributes('margin-top', 1);
+                    @include rem-attributes('margin-bottom', 1);
+                }
             }
         }
         /*
