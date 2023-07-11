@@ -88,10 +88,17 @@ html {
         header {
             div.logo {
                 text-align: center;
-                padding: 1rem;
 
-                img {
-                    max-height: 13.6rem;
+                @include rem-attributes('padding-top', 1);
+                @include rem-attributes('padding-bottom', 1);
+
+                a {
+                    display: block;
+
+                    img {
+                        @include rem-attributes('max-height', 13.6);
+                        max-width: 100%;
+                    }
                 }
             }
 
