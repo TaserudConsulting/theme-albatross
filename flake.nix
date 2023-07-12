@@ -21,14 +21,12 @@
     # Expose the version of hugo used to build the theme along with
     # extra dependencies.
     packages.hugo = pkgs.symlinkJoin {
-      name = "hugo-dart-sass-bundle";
+      name = "hugo-${pkgs.hugo.version}-dart-sass-embedded-${pkgs.dart-sass-embedded.version}-bundle";
 
       buildInputs = [pkgs.makeWrapper];
       paths = [pkgs.hugo pkgs.dart-sass-embedded];
 
-      postBuild = ''
-        wrapProgram "$out/bin/hugo" --prefix PATH : "${pkgs.dart-sass-embedded}"/bin
-      '';
+      postBuild = "wrapProgram $out/bin/hugo --prefix PATH : ${pkgs.dart-sass-embedded}/bin";
 
       meta.mainProgram = "hugo";
     };
@@ -42,9 +40,7 @@
 
       passthru.theme-name = "albatross";
 
-      installPhase = ''
-        cp -avr . $out
-      '';
+      installPhase = "cp -avr . $out";
     };
 
     # A test case to see that the theme builds.
@@ -56,13 +52,8 @@
 
       buildInputs = [self.packages.${system}.hugo];
 
-      buildPhase = ''
-        cd test && hugo --logLevel debug
-      '';
-
-      installPhase = ''
-        cp -vr public/ $out
-      '';
+      buildPhase = "cd test && hugo --logLevel debug";
+      installPhase = "cp -vr public/ $out";
     };
   }));
 }
