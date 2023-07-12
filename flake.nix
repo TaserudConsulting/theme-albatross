@@ -13,6 +13,7 @@
     ...
   } @ inputs: (flake-utils.lib.eachDefaultSystem (system: let
     pkgs = nixpkgs.legacyPackages.${system};
+    version = "0.0.0";
   in {
     # Specify formatter package for "nix fmt ." and "nix fmt . -- --check"
     formatter = pkgs.alejandra;
@@ -21,18 +22,22 @@
     # extra dependencies.
     packages.hugo = pkgs.symlinkJoin {
       name = "hugo-dart-sass-bundle";
-      paths = [pkgs.hugo pkgs.dart-sass-embedded];
+
       buildInputs = [pkgs.makeWrapper];
+      paths = [pkgs.hugo pkgs.dart-sass-embedded];
+
       postBuild = ''
         wrapProgram "$out/bin/hugo" --prefix PATH : "${pkgs.dart-sass-embedded}"/bin
       '';
+
       meta.mainProgram = "hugo";
     };
 
     # Expose the theme files.
     packages.theme = pkgs.stdenv.mkDerivation {
       pname = "weblizard-theme-albatross";
-      version = "0.0.0";
+      inherit version;
+
       src = ./src;
 
       passthru.theme-name = "albatross";
@@ -45,7 +50,8 @@
     # A test case to see that the theme builds.
     checks.test = pkgs.stdenv.mkDerivation {
       pname = "weblizard-theme-albatross-test";
-      version = "0.0.0";
+      inherit version;
+
       src = ./.;
 
       buildInputs = [self.packages.${system}.hugo];
