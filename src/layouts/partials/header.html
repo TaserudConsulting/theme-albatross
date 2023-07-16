@@ -11,7 +11,7 @@
             <li><a href="{{ "/" | absURL }}">{{ .Site.Params.home }}</a></li>
             {{ end }}
             {{ range .Site.Menus.main }}
-            <li>{{ .Pre }}<a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
             {{ end }}
         </ul>
         {{ end }}
