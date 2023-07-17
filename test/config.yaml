@@ -19,3 +19,8 @@ languages:
         - name: About
           url: /about/
           weight: 20
+
+      i18n:
+        - name: 🇸🇪
+          url: /
+          weight: 10

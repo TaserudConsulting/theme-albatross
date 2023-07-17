@@ -1,4 +1,13 @@
 <header>
+    {{ if (isset .Site.Menus "i18n") }}
+    <div class="i18n">
+        <ul>
+            {{ range .Site.Menus.i18n }}
+            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
     <div class="logo">
         <a href="{{ "/" | absURL }}">
             <img src="{{ .Site.Params.logoPath | absURL }}" alt="Logo of {{ .Site.Title }}" />
