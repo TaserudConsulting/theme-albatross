@@ -122,10 +122,10 @@ html {
 
                             color: var(--menu-foreground);
 
-                            font-size: 1.2rem;
-                            line-height: 3.4rem;
-                            padding-right: 1rem;
-                            padding-left: 1rem;
+                            @include rem-attributes('font-size', 1.2);
+                            @include rem-attributes('line-height', 3.4);
+                            @include rem-attributes('padding-right', 1);
+                            @include rem-attributes('padding-left', 1);
 
                             &:hover {
                                 background-color: var(--menu-item-hover-background);
