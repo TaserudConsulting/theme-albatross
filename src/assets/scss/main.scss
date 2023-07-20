@@ -14,6 +14,8 @@
     --background-color: #{h.$light-background-color};
     --foreground-color: #{contrast-color(h.$light-foreground-color, h.$light-background-color)};
 
+    --border-color: #{h.$border-color};
+
     --menu-background: #{h.$light-menu-background};
     --menu-foreground: #{contrast-color(h.$light-menu-foreground, h.$light-menu-background)};
     --menu-item-hover-background: #{h.$light-menu-item-hover-background};
@@ -140,8 +142,8 @@ html {
             nav {
                 text-align: center;
                 font-size: 0;
-                border-top: 1px solid black;
-                border-bottom: 1px solid black;
+                border-top: 1px solid var(--border-color);
+                border-bottom: 1px solid var(--border-color);
                 background-color: var(--menu-background);
 
                 ul {
@@ -231,7 +233,7 @@ html {
                 blockquote {
                     font-style: italic;
 
-                    border: 1px solid black;
+                    border: 1px solid var(--border-color);
 
                     @include rem-attributes('margin', 0.5);
 
@@ -241,7 +243,7 @@ html {
                 }
 
                 pre {
-                    border: 1px solid black;
+                    border: 1px solid var(--border-color);
                     overflow-x: scroll;
 
                     @include rem-attributes('margin', 0.5);
@@ -348,7 +350,7 @@ html {
         footer.footer {
             text-align: center;
 
-            border-top: 1px solid black;
+            border-top: 1px solid var(--border-color);
 
             div.content {
                 display: inline-block;
