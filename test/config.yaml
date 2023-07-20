@@ -9,6 +9,7 @@ languages:
 
     params:
       home: Startpage
+      homeUrl: /
 
     menu:
       main:

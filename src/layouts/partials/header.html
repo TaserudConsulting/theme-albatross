@@ -9,7 +9,7 @@
     </div>
     {{ end }}
     <div class="logo">
-        <a href="{{ "/" | absURL }}">
+        <a href="{{ .Site.Params.homeUrl | absURL }}">
             <img src="{{ .Site.Params.logoPath | absURL }}" alt="Logo of {{ .Site.Title }}" />
         </a>
     </div>
@@ -17,7 +17,7 @@
         {{ if (isset .Site.Menus "main") }}
         <ul>
             {{ if isset .Site.Params "home"}}
-            <li><a href="{{ "/" | absURL }}">{{ .Site.Params.home }}</a></li>
+            <li><a href="{{ .Site.Params.homeUrl | absURL }}">{{ .Site.Params.home }}</a></li>
             {{ end }}
             {{ range .Site.Menus.main }}
             <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
