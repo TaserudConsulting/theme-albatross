@@ -226,6 +226,14 @@ html {
                     }
                 }
 
+                pre {
+                    border: 1px solid black;
+                    overflow-x: scroll;
+
+                    @include rem-attributes('margin', 0.5);
+                    @include rem-attributes('padding', 0.5);
+                }
+
                 /*****************************************************
                  * BEGIN FOOD MENU LAYOUT
                  */

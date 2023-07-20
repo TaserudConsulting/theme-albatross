@@ -39,3 +39,12 @@ provident sapiente et veritatis ut rerum.
 > Consectetur dolores nihil dolorem. Qui deleniti eligendi et. Autem
 > laboriosam labore non. Ut eos et repudiandae labore officiis quis
 > explicabo qui.
+
+#### Heading level 4: Code blocks
+```nix
+{ ... }:
+let
+ a = a: a + a
+ b = a 3
+in b
+```
