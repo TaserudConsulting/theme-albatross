@@ -176,6 +176,9 @@ html {
                                 background-color: var(--menu-item-hover-background);
                                 color: var(--menu-item-hover-foreground);
                             }
+                            &:visited {
+                                color: var(--foreground-color);
+                            }
                         }
                     }
                 }
