@@ -19,6 +19,9 @@
     --menu-item-hover-background: #{h.$light-menu-item-hover-background};
     --menu-item-hover-foreground: #{contrast-color(h.$light-menu-item-hover-foreground, h.$light-menu-item-hover-background)};
 
+    --link-default-color: #{contrast-color(h.$link-default-color, h.$light-background-color)};
+    --link-visited-color: #{contrast-color(h.$link-visited-color, h.$light-background-color)};
+
     --font-size: #{h.$font-size}px;
     --font-family: #{h.$font-family};
 
@@ -38,6 +41,9 @@
     --menu-foreground: #{contrast-color(h.$dark-menu-foreground, h.$dark-menu-background)};
     --menu-item-hover-background: #{h.$dark-menu-item-hover-background};
     --menu-item-hover-foreground: #{contrast-color(h.$dark-menu-item-hover-foreground, h.$dark-menu-item-hover-background)};
+
+    --link-default-color: #{contrast-color(h.$link-default-color, h.$dark-background-color)};
+    --link-visited-color: #{contrast-color(h.$link-visited-color, h.$dark-background-color)};
 }
 
 /*********************************************************************
@@ -180,6 +186,14 @@ html {
                 display: inline-block;
 
                 @include rem-attributes('max-width', h.$page-content-width-factor);
+
+                a {
+                    color: var(--link-default-color);
+
+                    &:visited {
+                        color: var(--link-visited-color);
+                    }
+                }
 
                 h1 {
                     @include rem-attributes('font-size', h.$font-size-h1);

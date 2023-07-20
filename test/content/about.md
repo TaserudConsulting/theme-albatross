@@ -6,6 +6,8 @@ ullam dolorem tempore. Impedit at aut doloribus. Quos quisquam eos
 voluptatum laudantium laudantium numquam. Velit vero mollitia
 provident sapiente et veritatis ut rerum.
 
+Internal links test: [Start page](/), [Bad page](/foobar)
+
 ## Heading level 2: Unordered list
 - Ut ullam itaque aperiam necessitatibus nihil. Id nesciunt in
   provident reprehenderit. Rerum perspiciatis laudantium molestias

@@ -36,6 +36,9 @@ params:
     dark-background-color: '#2a2c31' # dark blue gray
     dark-foreground-color: '#ffffff' # white
 
+    link-default-color: '#0000EE' # blue
+    link-visited-color: '#551A8B' # purple
+
     # Menu item colors
     light-menu-background: '#e5e6ec' # light blue
     light-menu-foreground: '#000000' # black
