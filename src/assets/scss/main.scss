@@ -212,6 +212,20 @@ html {
                     }
                 }
 
+                // Make blockquotes look decent with some margins and
+                // borders and a different font style.
+                blockquote {
+                    font-style: italic;
+
+                    border: 1px solid black;
+
+                    @include rem-attributes('margin', 0.5);
+
+                    p {
+                        @include rem-attributes('padding', 0.5);
+                    }
+                }
+
                 /*****************************************************
                  * BEGIN FOOD MENU LAYOUT
                  */
