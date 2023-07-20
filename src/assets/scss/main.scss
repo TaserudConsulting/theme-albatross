@@ -202,6 +202,16 @@ html {
                     @include rem-attributes('margin-bottom', 1);
                 }
 
+                // Make lists look decent with some margins
+                ul, ol {
+                    @include rem-attributes('margin-left', 1.5);
+
+                    li {
+                        @include rem-attributes('margin-top', 0.5);
+                        @include rem-attributes('margin-bottom', 0.5);
+                    }
+                }
+
                 /*****************************************************
                  * BEGIN FOOD MENU LAYOUT
                  */
@@ -246,6 +256,7 @@ html {
                 div.food-menu {
                     ul.items {
                         list-style: none;
+                        margin-left: 0;
 
                         li.item {
                             display: inline-block;
@@ -278,6 +289,8 @@ html {
                 div.food-menu-flags {
                     ul {
                         list-style: none;
+                        margin-left: 0;
+
                         li {
                             float: left;
                             @include rem-attributes('padding', 0.6);
