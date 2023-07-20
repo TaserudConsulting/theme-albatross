@@ -90,6 +90,14 @@ html {
     body {
         line-height: 1.5;
 
+        a {
+            color: var(--link-default-color);
+
+            &:visited {
+                color: var(--link-visited-color);
+            }
+        }
+
         /*************************************************************
          * BEGIN NAVIGATION LAYOUT
          */
@@ -188,14 +196,6 @@ html {
                 display: inline-block;
 
                 @include rem-attributes('max-width', h.$page-content-width-factor);
-
-                a {
-                    color: var(--link-default-color);
-
-                    &:visited {
-                        color: var(--link-visited-color);
-                    }
-                }
 
                 h1 {
                     @include rem-attributes('font-size', h.$font-size-h1);

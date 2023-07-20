@@ -3,8 +3,10 @@
         <p>
             Copyright &copy; {{ cond (isset .Site.Params "copyrightowner") .Site.Params.copyrightowner "2022 WebLizard" }}.
         </p>
+        {{ if .Site.Params.showAttribution }}
         <p>
-            {{ i18n "footer-made-by-weblizard" }}
+            {{ i18n "footer-made-by-hirwing-consulting-ab" | markdownify }}
         </p>
+        {{ end }}
     </div>
 </footer>

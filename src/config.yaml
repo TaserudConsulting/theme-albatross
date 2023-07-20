@@ -9,6 +9,7 @@ disableKinds:
 
 params:
   copyrightOwner: 2022 WebLizard Albatross
+  showAttribution: true
 
   # Logo and icon to display
   logoPath: /img/albatross_logo.png
