@@ -31,32 +31,37 @@ params:
     # Font family
     font-family: sans
 
-    # Colors
-    light-background-color: '#fbf9fa' # light light blue
-    light-foreground-color: '#000000' # black
-    dark-background-color: '#2a2c31' # dark blue gray
-    dark-foreground-color: '#ffffff' # white
+    # Light colors
+    light-background-color: '#FBF9FA' # Seasalt
+    light-border-color: '#000000' # Black
+    light-foreground-color: 'contrast-color(#000000, #FBF9FA)' # Black, Seasalt
+    light-link-default-color: 'contrast-color(#0000EE, #FBF9FA)' # Blue, Seasalt
+    light-link-visited-color: 'contrast-color(#551A8B, #FBF9FA)' # Purple, Seasalt
+    light-menu-background: '#E5E6EC' # Anti-flash white
+    light-menu-foreground: 'contrast-color(#000000, #E5E6EC)' # Black, Anti-flash white
+    light-menu-item-hover-background: 'darken(#E5E6EC, 5%)' # Anti-flash white
+    light-menu-item-hover-foreground: 'contrast-color(#000000, #E5E6EC)' # Black, Anti-flash white
+    light-food-menu-flags-gluten-free-background-color: '#F6D563' # Naples yellow
+    light-food-menu-flags-gluten-free-foreground-color: 'contrast-color(#FFFFFF, #F6D563)' # White, Naples yellow
+    light-food-menu-flags-vegan-background-color: '#006400' # Office Green
+    light-food-menu-flags-vegan-foreground-color: 'contrast-color(#FFFFFF, #006400)' # White, Office Green
+    light-food-menu-flags-vegetarian-background-color: '#006400' # Office Green
+    light-food-menu-flags-vegetarian-foreground-color: 'contrast-color(#FFFFFF, #006400)' # White, Office Green
 
-    border-color: '#000000' # black
 
-    link-default-color: '#0000EE' # blue
-    link-visited-color: '#551A8B' # purple
-
-    # Menu item colors
-    light-menu-background: '#e5e6ec' # light blue
-    light-menu-foreground: '#000000' # black
-    light-menu-item-hover-background: 'darken(#e5e6ec, 5%)'
-    light-menu-item-hover-foreground: '#000000' # black
-
-    dark-menu-background: '#27373f' # dark blue gray
-    dark-menu-foreground: '#ffffff' # white
-    dark-menu-item-hover-background: 'lighten(#27373f, 5%)'
-    dark-menu-item-hover-foreground: '#ffffff' # white
-
-    # Food menu flags
-    food-menu-flags-vegan-background-color: '#006400' # darkgreen
-    food-menu-flags-vegan-foreground-color: '#ffffff' # white
-    food-menu-flags-vegetarian-background-color: '#006400' # darkgreen
-    food-menu-flags-vegetarian-foreground-color: '#ffffff' # white
-    food-menu-flags-gluten-free-background-color: '#f6d563' # Dark yellowish
-    food-menu-flags-gluten-free-foreground-color: '#ffffff' # white
+    # Dark colors
+    dark-background-color: '#2A2C31' # Jet
+    dark-border-color: '#000000' # Black
+    dark-foreground-color: 'contrast-color(#000000, #2A2C31)' # Black, Jet
+    dark-link-default-color: 'contrast-color(#0000EE, #2A2C31)' # Blue, Jet
+    dark-link-visited-color: 'contrast-color(#551A8B, #2A2C31)' # Purple, Jet
+    dark-menu-background: '#27373F' # Gunmetal
+    dark-menu-foreground: 'contrast-color(#FFFFFF, #27373F)' # White, Gunmetal
+    dark-menu-item-hover-background: 'lighten(#27373F, 5%)' # Gunmetal
+    dark-menu-item-hover-foreground: 'contrast-color(#FFFFFF, lighten(#27373F, 5%))' # White, Gunmetal
+    dark-food-menu-flags-gluten-free-background-color: '#F6D563' # Naples yellow
+    dark-food-menu-flags-gluten-free-foreground-color: 'contrast-color(#FFFFFF, #F6D563)' # White, Naples yellow
+    dark-food-menu-flags-vegan-background-color: '#006400' # Office Green
+    dark-food-menu-flags-vegan-foreground-color: 'contrast-color(#FFFFFF, #006400)' # White, Office Green
+    dark-food-menu-flags-vegetarian-background-color: '#006400' # Office Green
+    dark-food-menu-flags-vegetarian-foreground-color: 'contrast-color(#FFFFFF, #006400)' # White, Office Green
