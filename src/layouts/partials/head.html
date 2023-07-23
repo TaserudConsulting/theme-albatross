@@ -10,6 +10,9 @@
     <!-- Make mobile pages responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Add link to atom feed -->
+    <link rel="alternate" type="application/atom+xml" href="{{ printf "%s/index.xml" .Site.Params.homeUrl | absURL }}" title="{{ .Site.Title }}" />
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ .Site.Params.iconPath | absURL }}" />
 
