@@ -22,6 +22,7 @@ params:
 
     # Page content width factor
     page-content-width-factor: 42
+    page-i18n-padding: 0
 
     # Font size for different elements in rems
     font-size-h1: 1.8

@@ -391,6 +391,13 @@ html {
         @include dark-theme();
     }
 }
+
+@media only screen and (max-width: 530px) {
+    html body header {
+        @include rem-attributes('padding-top', $page-i18n-padding);
+    }
+}
+
 /*
  * END THEME
  ********************************************************************/
