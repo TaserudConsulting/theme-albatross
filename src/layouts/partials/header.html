@@ -10,7 +10,11 @@
     {{ end }}
     <div class="logo">
         <a href="{{ .Site.Params.homeUrl | absURL }}">
-            <img src="{{ .Site.Params.logoPath | absURL }}" alt="Logo of {{ .Site.Title }}" />
+            <picture>
+                <source srcset="{{ .Site.Params.darkLogoPath | absURL }}" media="(prefers-color-scheme: dark)" />
+                <source srcset="{{ .Site.Params.lightLogoPath | absURL }}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+                <img src="{{ .Site.Params.lightLogoPath | absURL }}" alt="Logo of {{ .Site.Title }}" />
+            </picture>
         </a>
     </div>
     <nav>

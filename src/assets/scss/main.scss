@@ -142,6 +142,7 @@ html {
 
                 a {
                     display: block;
+                    line-height: 0;
 
                     img {
                         @include rem-attributes('max-height', 13.6);

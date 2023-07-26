@@ -11,8 +11,9 @@ params:
   copyrightOwner: 2022 WebLizard Albatross
   showAttribution: true
 
-  # Logo and icon to display
-  logoPath: /img/albatross_logo.png
+  # Dark and light logo paths as well as icon path
+  darkLogoPath: /img/albatross_logo.png
+  lightLogoPath: /img/albatross_logo.png
   iconPath: /img/albatross_icon.png
 
   style:
