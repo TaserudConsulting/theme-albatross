@@ -121,13 +121,15 @@ html {
                         float: left;
 
                         a {
-                            @include rem-attributes('font-size', 2.5);
-                            @include rem-attributes('line-height', 3);
-                            @include rem-attributes('padding-right', 0.25);
                             @include rem-attributes('padding-left', 0.25);
+                            @include rem-attributes('padding-top', 0.5);
 
                             text-decoration: none;
                             display: inline-block;
+
+                            img {
+                                @include rem-attributes('height', 2.5);
+                            }
                         }
                     }
                 }

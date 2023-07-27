@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable-small;
     flake-utils.url = "flake-utils";
+    web-iso-flags.url = git+ssh://gitea@git.elis.nu/WebLizard/web-iso-flags;
   };
 
   outputs = {
@@ -17,6 +18,9 @@
   in {
     # Specify formatter package for "nix fmt ." and "nix fmt . -- --check"
     formatter = pkgs.alejandra;
+
+    # Expose the web iso flags for esay access.
+    packages.web-iso-flags = inputs.web-iso-flags.packages.${system}.default;
 
     # Expose the version of hugo used to build the theme along with
     # extra dependencies.
@@ -40,7 +44,11 @@
 
       passthru.theme-name = "albatross";
 
-      installPhase = "cp -avr . $out";
+      installPhase = ''
+        cp -avr . $out
+
+        install -m 644 -D ${self.packages.${system}.web-iso-flags}/* -t $out/static/img/iso-flags
+      '';
     };
 
     # A test case to see that the theme builds.

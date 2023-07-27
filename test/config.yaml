@@ -22,6 +22,6 @@ languages:
           weight: 20
 
       i18n:
-        - name: 🇸🇪
+        - name: se
           url: /
           weight: 10

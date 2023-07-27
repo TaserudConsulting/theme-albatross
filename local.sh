@@ -3,6 +3,11 @@
 
 set -euo pipefail
 
+# Install the iso flags svgs
+rm -rf src/static/img/iso-flags
+mkdir -p src/static/img/iso-flags
+install -m 644 -D $(nix build .#web-iso-flags --print-out-paths --no-link)/* -t src/static/img/iso-flags
+
 cd test/
 
 sleep 1 && xdg-open "http://localhost:1313/" &

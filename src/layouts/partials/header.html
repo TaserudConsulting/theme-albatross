@@ -3,7 +3,11 @@
     <div class="i18n">
         <ul>
             {{ range .Site.Menus.i18n }}
-            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            <li>
+                <a href="{{ .URL | relURL }}">
+                    <img src="{{ printf "/img/iso-flags/%s.svg" .Name | absURL }}" alt="{{ .Name }} flag" />
+                </a>
+            </li>
             {{ end }}
         </ul>
     </div>
