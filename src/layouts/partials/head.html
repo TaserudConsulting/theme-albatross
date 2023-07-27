@@ -1,5 +1,5 @@
 <head>
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <title>{{ if (.Title | len) }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
 
     <!-- Set page encoding -->
     <meta charset="utf-8" />
