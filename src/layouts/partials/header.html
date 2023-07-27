@@ -3,17 +3,17 @@
     <div class="i18n">
         <ul>
             {{ range .Site.Menus.i18n }}
-            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
             {{ end }}
         </ul>
     </div>
     {{ end }}
     <div class="logo">
-        <a href="{{ .Site.Params.homeUrl | absURL }}">
+        <a href="{{ .Site.Params.homeUrl | relURL }}">
             <picture>
-                <source srcset="{{ .Site.Params.darkLogoPath | absURL }}" media="(prefers-color-scheme: dark)" />
-                <source srcset="{{ .Site.Params.lightLogoPath | absURL }}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-                <img src="{{ .Site.Params.lightLogoPath | absURL }}" alt="Logo of {{ .Site.Title }}" />
+                <source srcset="{{ .Site.Params.darkLogoPath | relURL }}" media="(prefers-color-scheme: dark)" />
+                <source srcset="{{ .Site.Params.lightLogoPath | relURL }}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+                <img src="{{ .Site.Params.lightLogoPath | relURL }}" alt="Logo of {{ .Site.Title }}" />
             </picture>
         </a>
     </div>
@@ -21,10 +21,10 @@
         {{ if (isset .Site.Menus "main") }}
         <ul>
             {{ if isset .Site.Params "home"}}
-            <li><a href="{{ .Site.Params.homeUrl | absURL }}">{{ .Site.Params.home }}</a></li>
+            <li><a href="{{ .Site.Params.homeUrl | relURL }}">{{ .Site.Params.home }}</a></li>
             {{ end }}
             {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
             {{ end }}
         </ul>
         {{ end }}
