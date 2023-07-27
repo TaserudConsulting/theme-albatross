@@ -16,6 +16,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ .Site.Params.iconPath | absURL }}" />
 
+    <!-- Extra head content -->
+    {{ .Site.Params.extraHeadContent | safeHTML }}
+
     <!-- SCSS -->
     {{ $options := (dict "targetPath" "css/style.css"
                          "vars" site.Params.style

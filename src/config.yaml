@@ -11,6 +11,9 @@ params:
   copyrightOwner: 2022 WebLizard Albatross
   showAttribution: true
 
+  # Extra head content to render within the <head> tag
+  extraHeadContent: ''
+
   # Dark and light logo paths as well as icon path
   darkLogoPath: /img/albatross_logo.png
   lightLogoPath: /img/albatross_logo.png
