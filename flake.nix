@@ -1,5 +1,5 @@
 {
-  description = "WebLizard Theme: Albatross";
+  description = "Taserud Consulting AB Theme: Albatross";
 
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable-small;
@@ -39,7 +39,7 @@
 
     # Expose the theme files.
     packages.theme = pkgs.stdenv.mkDerivation {
-      pname = "weblizard-theme-albatross";
+      pname = "taserud-consulting-ab--theme-albatross";
       inherit version;
 
       src = ./src;
@@ -55,7 +55,7 @@
 
     # A test case to see that the theme builds.
     checks.test = pkgs.stdenv.mkDerivation {
-      pname = "weblizard-theme-albatross-test";
+      pname = "taserud-consulting-ab-theme-albatross-test";
       inherit version;
 
       src = ./.;

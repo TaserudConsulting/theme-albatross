@@ -5,7 +5,7 @@ name: Albatross
 license: ISC
 licenselink: https://git.elis.nu/WebLizard/Themes/src/branch/main/LICENSE
 description: ""
-homepage: http://albatross.weblizard.local/
+homepage: http://albatross.local/
 tags: []
 features: []
 min_version: "0.41.0"
