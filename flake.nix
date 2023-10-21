@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-unstable-small;
     flake-utils.url = "flake-utils";
-    web-iso-flags.url = git+ssh://gitea@git.elis.nu/WebLizard/web-iso-flags;
+    web-iso-flags.url = git+ssh://git@github.com/TaserudConsulting/web-iso-flags;
     web-iso-flags.inputs.flake-utils.follows = "flake-utils";
     web-iso-flags.inputs.nixpkgs.follows = "nixpkgs";
   };

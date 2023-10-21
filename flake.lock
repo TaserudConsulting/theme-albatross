@@ -5,11 +5,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1689068808,
-        "narHash": "sha256-6ixXo3wt24N/melDWjq70UuHQLxGV8jZvooRanIHXw0=",
+        "lastModified": 1694529238,
+        "narHash": "sha256-zsNZZGTGnMOf9YpHKJqMSsa0dXbfmxeoJ7xHlrt+xmY=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "919d646de7be200f3bf08cb76ae1f09402b6f9b4",
+        "rev": "ff7b65b44d01cf9ba6a71320833626af21126384",
         "type": "github"
       },
       "original": {
@@ -65,17 +65,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1692708068,
-        "narHash": "sha256-FLkCyKrK2wEq1TMYaXDTEGdWPHe6uDH+bcZcK1CQqyU=",
+        "lastModified": 1697891230,
+        "narHash": "sha256-pNF9ME2sBMaTe9C3ifSbyitgP7gKDnGo8zGBr3qN3zU=",
         "ref": "refs/heads/main",
-        "rev": "d4a6c5d2dbbbe5a21f9d25fd3deddf239d9a5ad8",
-        "revCount": 7,
+        "rev": "85ca51fb318b88e297c999f32ece837bfa82ecce",
+        "revCount": 9,
         "type": "git",
-        "url": "ssh://gitea@git.elis.nu/WebLizard/web-iso-flags"
+        "url": "ssh://git@github.com/TaserudConsulting/web-iso-flags"
       },
       "original": {
         "type": "git",
-        "url": "ssh://gitea@git.elis.nu/WebLizard/web-iso-flags"
+        "url": "ssh://git@github.com/TaserudConsulting/web-iso-flags"
       }
     }
   },
