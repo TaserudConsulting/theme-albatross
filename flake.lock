@@ -65,11 +65,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1700072524,
-        "narHash": "sha256-krdlAGoY0YB9lBaOSLRV0n0x4M59wbw5MK5AdNA8Fog=",
+        "lastModified": 1703101411,
+        "narHash": "sha256-GS7jDo21FljzY8F3mG5EBCuuF4Xg2luh6iCYAHB1/6A=",
         "ref": "refs/heads/main",
-        "rev": "06b7c8ed519901a1989600ac7c54f4f7df1ad0c0",
-        "revCount": 16,
+        "rev": "73dd24b68a734c4f4960a72372f5e9cb09f1526b",
+        "revCount": 24,
         "type": "git",
         "url": "ssh://git@github.com/TaserudConsulting/web-iso-flags"
       },
