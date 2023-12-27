@@ -1,5 +1,6 @@
 ---
 title: Startpage
+showPostsListing: true
 ---
 Magni fuga excepturi placeat. Hic perferendis eaque rerum rerum earum
 error autem consequatur. Impedit velit voluptate possimus consequatur

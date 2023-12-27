@@ -259,6 +259,44 @@ html {
                     @include rem-attributes('padding', 0.5);
                 }
 
+                div.pagination {
+                    text-align: center;
+
+                    ul.pagination {
+                        list-style: none;
+                        display: inline-block;
+
+                        li.page-item {
+                            float: left;
+
+                            @include rem-attributes('margin', 0.5);
+
+                            a {
+                                display: inline-block;
+
+                                color: var(--menu-foreground);
+                                background-color: var(--menu-background);
+
+                                @include rem-attributes('line-height', 2.2);
+                                @include rem-attributes('padding-right', 1.1);
+                                @include rem-attributes('padding-left', 1.1);
+
+                                border-radius: 0.25em;
+
+                                border: 1px solid var(--border-color);
+
+                                &:hover {
+                                    background-color: var(--menu-item-hover-background);
+                                    color: var(--menu-item-hover-foreground);
+                                }
+                                &:visited {
+                                    color: var(--foreground-color);
+                                }
+                            }
+                        }
+                    }
+                }
+
                 /*****************************************************
                  * BEGIN FOOD MENU LAYOUT
                  */
