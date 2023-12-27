@@ -16,6 +16,19 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ .Site.Params.iconPath | absURL }}" />
 
+    <!-- Open graph -->
+    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta property="og:locale" content="{{ slicestr .Site.LanguageCode 0 2 }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:title" content="{{ if ne .Page.RelPermalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    {{ if .Params.ogImagePath }}
+    <meta property="og:image" content="{{ .Params.ogImagePath | absURL }}" />
+    {{ else }}
+    <meta property="og:image" content="{{ .Site.Params.ogImagePath | absURL }}" />
+    {{ end }}
+
     <!-- Extra head content -->
     {{ .Site.Params.extraHeadContent | safeHTML }}
 

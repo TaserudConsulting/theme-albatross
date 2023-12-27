@@ -19,6 +19,9 @@ params:
   lightLogoPath: /img/albatross_logo.png
   iconPath: /img/albatross_icon.png
 
+  # Site wide open graph image to use for sharing
+  ogImagePath: /img/albatross_logo.png
+
   style:
     # Base font size in px
     font-size: 18
