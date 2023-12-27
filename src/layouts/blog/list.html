@@ -18,7 +18,7 @@
             <p>{{ .Description }}</p>
             <a href="{{ .Permalink }}">{{ i18n "read-on" }} &rarr;</a>
             {{ else }}
-            {{ .Summary }}
+            <p>{{ .Summary }}</p>
             {{ if .Truncated }}<a href="{{ .Permalink }}">{{ i18n "read-on" }} &rarr;</a>{{ end }}
             {{ end }}
         </div>
