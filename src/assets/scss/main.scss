@@ -237,6 +237,11 @@ html {
                     }
                 }
 
+                // Set max with for images in content
+                img {
+                    max-width: 100%;
+                }
+
                 // Make blockquotes look decent with some margins and
                 // borders and a different font style.
                 blockquote {
