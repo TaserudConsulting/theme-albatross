@@ -28,6 +28,7 @@
     {{ else }}
     <meta property="og:image" content="{{ .Site.Params.ogImagePath | absURL }}" />
     {{ end }}
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Extra head content -->
     {{ .Site.Params.extraHeadContent | safeHTML }}
