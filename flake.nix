@@ -49,7 +49,32 @@
       installPhase = ''
         cp -avr . $out
 
+        # Install iso flags resources
         install -m 644 -D ${self.packages.${system}.web-iso-flags}/* -t $out/static/img/iso-flags
+
+        # Install fontawesome resources
+        install -m 644 -D ${self.packages.${system}.fontawesome}/scss/* -t $out/assets/scss/fontawesome
+        install -m 644 -D ${self.packages.${system}.fontawesome}/webfonts/* -t $out/static/fonts/fontawesome
+      '';
+    };
+
+    packages.fontawesome = let
+      version = "6.5.1";
+    in pkgs.stdenv.mkDerivation {
+      pname = "fontawesome-free";
+      inherit version;
+
+      src = pkgs.fetchzip {
+        url = "https://use.fontawesome.com/releases/v${version}/fontawesome-free-${version}-web.zip";
+        hash = "sha256-gXXhKyTDC/Q6PBzpWRFvx/TxcUd3msaRSdC3ZHFzCoc=";
+      };
+
+      buildPhase = ":";
+
+      installPhase = ''
+        mkdir -p $out
+
+        cp -vr scss webfonts $out
       '';
     };
 
