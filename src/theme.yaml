@@ -15,7 +15,7 @@ author:
   homepage: ""
 
 # If porting an existing theme
-original
+original:
   name: ""
   homepage: ""
   repo: ""
