@@ -66,7 +66,9 @@ $fa-font-path: "/fonts/fontawesome";
 /*********************************************************************
  * Apply a natural box layout model to all elements
  */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -77,20 +79,82 @@ $fa-font-path: "/fonts/fontawesome";
 /*********************************************************************
  * CSS Reset
  */
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins,
-kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul,
-li, fieldset, form, label, legend, table, caption, tbody, tfoot,
-thead, tr, th, td, article, aside, canvas, details, figcaption,
-figure, footer, header, hgroup, menu, nav, section, summary, time,
-mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 /*********************************************************************
@@ -180,6 +244,7 @@ html {
 
                     li {
                         float: left;
+
                         a {
                             display: inline-block;
 
@@ -194,6 +259,7 @@ html {
                                 background-color: var(--menu-item-hover-background);
                                 color: var(--menu-item-hover-foreground);
                             }
+
                             &:visited {
                                 color: var(--foreground-color);
                             }
@@ -202,6 +268,7 @@ html {
                 }
             }
         }
+
         /*
          * END NAVIGATION LAYOUT
          ************************************************************/
@@ -234,13 +301,19 @@ html {
                     @include rem-attributes('font-size', $font-size-h4);
                 }
 
-                > h1, > h2, > h3, > h4, > div, > p {
+                >h1,
+                >h2,
+                >h3,
+                >h4,
+                >div,
+                >p {
                     @include rem-attributes('margin-top', 1);
                     @include rem-attributes('margin-bottom', 1);
                 }
 
                 // Make lists look decent with some margins
-                ul, ol {
+                ul,
+                ol {
                     @include rem-attributes('margin-left', 1.5);
 
                     li {
@@ -306,6 +379,7 @@ html {
                                     background-color: var(--menu-item-hover-background);
                                     color: var(--menu-item-hover-foreground);
                                 }
+
                                 &:visited {
                                     color: var(--foreground-color);
                                 }
@@ -317,8 +391,11 @@ html {
                 /*****************************************************
                  * BEGIN FOOD MENU LAYOUT
                  */
-                div.food-menu, div.food-menu-flags {
-                    div.flags, ul.flags {
+                div.food-menu,
+                div.food-menu-flags {
+
+                    div.flags,
+                    ul.flags {
                         @include rem-attributes('line-height', 3);
 
                         span.flag {
@@ -355,6 +432,7 @@ html {
                         }
                     }
                 }
+
                 div.food-menu {
                     ul.items {
                         list-style: none;
@@ -388,6 +466,7 @@ html {
                         }
                     }
                 }
+
                 div.food-menu-flags {
                     ul {
                         list-style: none;
@@ -399,11 +478,13 @@ html {
                         }
                     }
                 }
+
                 /*
                  * END FOOD MENU LAYOUT
                  ****************************************************/
             }
         }
+
         /*
          * END CONTENT LAYOUT
          ************************************************************/
@@ -427,11 +508,13 @@ html {
                 }
             }
         }
+
         /*
          * END FOOTER FOOTER LAYOUT
          ************************************************************/
     }
 }
+
 /*
  * END LAYOUT
  ********************************************************************/
