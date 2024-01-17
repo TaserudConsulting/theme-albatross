@@ -16,10 +16,6 @@ $fa-font-path: "/fonts/fontawesome";
 /********************************************************************
  * Helper mixins
  */
-@mixin rem-attributes($name, $remSize) {
-    #{$name}: #{$font-size * $remSize}px;
-    #{$name}: #{$remSize}rem;
-}
 
 // Mixins with the variables for the color themes.
 @mixin light-theme() {
@@ -62,6 +58,24 @@ $fa-font-path: "/fonts/fontawesome";
     --menu-item-hover-background: #{$dark-menu-item-hover-background};
     --menu-item-hover-foreground: #{$dark-menu-item-hover-foreground};
 }
+
+/*********************************************************************
+ * THEME
+ */
+
+:root {
+    @include light-theme();
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include dark-theme();
+    }
+}
+
+/*
+ * END THEME
+ ********************************************************************/
 
 /*********************************************************************
  * Apply a natural box layout model to all elements
@@ -182,7 +196,7 @@ html {
          */
         header {
             @media only screen and (max-width: 530px) {
-                @include rem-attributes('padding-top', $page-i18n-padding);
+                padding-top: #{$page-i18n-padding}rem;
             }
 
             div.i18n {
@@ -195,20 +209,20 @@ html {
                     display: inline-block;
                     list-style: none;
                     margin: 0;
-                    @include rem-attributes('padding-right', 0.5);
+                    padding-right: 0.5rem;
 
                     li {
                         float: left;
 
                         a {
-                            @include rem-attributes('padding-left', 0.25);
-                            @include rem-attributes('padding-top', 0.5);
+                            padding-right: 0.25rem;
+                            padding-top: 0.5rem;
 
                             text-decoration: none;
                             display: inline-block;
 
                             img {
-                                @include rem-attributes('height', 2.5);
+                                height: 2.5rem;
                             }
                         }
                     }
@@ -218,16 +232,15 @@ html {
             div.logo {
                 text-align: center;
                 z-index: 0;
-
-                @include rem-attributes('padding-top', 1);
-                @include rem-attributes('padding-bottom', 1);
+                padding-top: 1rem;
+                padding-bottom: 1rem;
 
                 a {
                     display: block;
                     line-height: 0;
 
                     img {
-                        @include rem-attributes('max-height', 13.6);
+                        max-height: 13.6rem;
                         max-width: 100%;
                     }
                 }
@@ -254,10 +267,10 @@ html {
 
                             color: var(--menu-foreground);
 
-                            @include rem-attributes('font-size', 1.2);
-                            @include rem-attributes('line-height', 3.4);
-                            @include rem-attributes('padding-right', 1);
-                            @include rem-attributes('padding-left', 1);
+                            font-size: 1.2rem;
+                            line-height: 3.4rem;
+                            padding-right: 1rem;
+                            padding-left: 1rem;
 
                             &:hover {
                                 background-color: var(--menu-item-hover-background);
@@ -284,30 +297,29 @@ html {
             text-align: center;
 
             @media only screen and (max-width: #{$page-content-width-factor * $font-size}px) {
-                @include rem-attributes('padding-left', 0.5);
-                @include rem-attributes('padding-right', 0.5);
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
             }
 
             div.content {
                 text-align: left;
                 display: inline-block;
-
-                @include rem-attributes('max-width', $page-content-width-factor);
+                max-width: #{$page-content-width-factor}rem;
 
                 h1 {
-                    @include rem-attributes('font-size', $font-size-h1);
+                    font-size: #{$font-size-h1}rem;
                 }
 
                 h2 {
-                    @include rem-attributes('font-size', $font-size-h2);
+                    font-size: #{$font-size-h2}rem;
                 }
 
                 h3 {
-                    @include rem-attributes('font-size', $font-size-h3);
+                    font-size: #{$font-size-h3}rem;
                 }
 
                 h4 {
-                    @include rem-attributes('font-size', $font-size-h4);
+                    font-size: #{$font-size-h4}rem;
                 }
 
                 >h1,
@@ -316,18 +328,18 @@ html {
                 >h4,
                 >div,
                 >p {
-                    @include rem-attributes('margin-top', 1);
-                    @include rem-attributes('margin-bottom', 1);
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
                 }
 
                 // Make lists look decent with some margins
                 ul,
                 ol {
-                    @include rem-attributes('margin-left', 1.5);
+                    margin-left: 1.5rem;
 
                     li {
-                        @include rem-attributes('margin-top', 0.5);
-                        @include rem-attributes('margin-bottom', 0.5);
+                        margin-top: 0.5rem;
+                        margin-bottom: 0.5rem;
                     }
                 }
 
@@ -343,10 +355,10 @@ html {
 
                     border: 1px solid var(--border-color);
 
-                    @include rem-attributes('margin', 0.5);
+                    margin: 0.5rem;
 
                     p {
-                        @include rem-attributes('padding', 0.5);
+                        padding: 0.5rem;
                     }
                 }
 
@@ -354,8 +366,8 @@ html {
                     border: 1px solid var(--border-color);
                     overflow-x: scroll;
 
-                    @include rem-attributes('margin', 0.5);
-                    @include rem-attributes('padding', 0.5);
+                    margin: 0.5rem;
+                    padding: 0.5rem;
                 }
 
                 div.pagination {
@@ -368,7 +380,7 @@ html {
                         li.page-item {
                             float: left;
 
-                            @include rem-attributes('margin', 0.5);
+                            margin: 0.5rem;
 
                             a {
                                 display: inline-block;
@@ -376,12 +388,11 @@ html {
                                 color: var(--menu-foreground);
                                 background-color: var(--menu-background);
 
-                                @include rem-attributes('line-height', 2.2);
-                                @include rem-attributes('padding-right', 1.1);
-                                @include rem-attributes('padding-left', 1.1);
+                                line-height: 2.2rem;
+                                padding-right: 1.1rem;
+                                padding-left: 1.1rem;
 
-                                border-radius: 0.25em;
-
+                                border-radius: 0.25rem;
                                 border: 1px solid var(--border-color);
 
                                 &:hover {
@@ -405,12 +416,12 @@ html {
 
                     div.flags,
                     ul.flags {
-                        @include rem-attributes('line-height', 3);
+                        line-height: 3rem;
 
                         span.flag {
-                            @include rem-attributes('padding', 0.3);
-                            @include rem-attributes('margin-left', 0.6);
-                            @include rem-attributes('border-radius', 0.3);
+                            padding: 0.3rem;
+                            margin-left: 0.6rem;
+                            border-radius: 0.3rem;
 
                             &.vegan {
                                 background: var(--food-menu-flags-vegan-background-color);
@@ -450,19 +461,19 @@ html {
                         li.item {
                             display: inline-block;
                             width: 100%;
-                            @include rem-attributes('padding-top', 0.6);
-                            @include rem-attributes('padding-bottom', 0.6);
+                            padding-top: 0.6rem;
+                            padding-bottom: 0.6rem;
 
                             span.title {
                                 float: left;
                                 font-weight: bold;
-                                @include rem-attributes('font-size', 1.2);
+                                font-size: 1.2rem;
                             }
 
                             span.price {
                                 float: right;
                                 font-weight: bold;
-                                @include rem-attributes('font-size', 1.2);
+                                font-size: 1.2rem;
                             }
 
                             div.flags {
@@ -483,7 +494,7 @@ html {
 
                         li {
                             float: left;
-                            @include rem-attributes('padding', 0.6);
+                            padding: 0.6rem;
                         }
                     }
                 }
@@ -509,11 +520,11 @@ html {
             div.content {
                 display: inline-block;
 
-                @include rem-attributes('max-width', $page-content-width-factor);
+                max-width: #{$page-content-width-factor}rem;
 
                 p {
-                    @include rem-attributes('margin-top', 1);
-                    @include rem-attributes('margin-bottom', 1);
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
                 }
             }
         }
@@ -526,21 +537,4 @@ html {
 
 /*
  * END LAYOUT
- ********************************************************************/
-
-/*********************************************************************
- * THEME
- */
-:root {
-    @include light-theme();
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        @include dark-theme();
-    }
-}
-
-/*
- * END THEME
  ********************************************************************/
