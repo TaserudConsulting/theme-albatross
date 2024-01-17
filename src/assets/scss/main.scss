@@ -181,6 +181,10 @@ html {
          * BEGIN NAVIGATION LAYOUT
          */
         header {
+            @media only screen and (max-width: 530px) {
+                @include rem-attributes('padding-top', $page-i18n-padding);
+            }
+
             div.i18n {
                 position: absolute;
                 top: 0;
@@ -278,6 +282,11 @@ html {
          */
         div.wrapper {
             text-align: center;
+
+            @media only screen and (max-width: #{$page-content-width-factor * $font-size}px) {
+                @include rem-attributes('padding-left', 0.5);
+                @include rem-attributes('padding-right', 0.5);
+            }
 
             div.content {
                 text-align: left;
@@ -529,19 +538,6 @@ html {
 @media (prefers-color-scheme: dark) {
     :root {
         @include dark-theme();
-    }
-}
-
-@media only screen and (max-width: #{$page-content-width-factor * $font-size}px) {
-    html body div.wrapper {
-        @include rem-attributes('padding-left', 0.5);
-        @include rem-attributes('padding-right', 0.5);
-    }
-}
-
-@media only screen and (max-width: 530px) {
-    html body header {
-        @include rem-attributes('padding-top', $page-i18n-padding);
     }
 }
 
