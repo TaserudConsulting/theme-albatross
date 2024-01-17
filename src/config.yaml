@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: http://example.org/
 title: Albatross theme - Taserud Consulting AB
 defaultContentLanguage: sv
 theme: albatross
