@@ -5,11 +5,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1701680307,
-        "narHash": "sha256-kAuep2h5ajznlPMD9rnQyffWG8EM/C73lejGofXvdM8=",
+        "lastModified": 1705309234,
+        "narHash": "sha256-uNRRNRKmJyCRC/8y1RqBkqWBLM034y4qN7EprSdmgyA=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "4022d587cbbfd70fe950c1e2083a02621806a725",
+        "rev": "1ef2e671c3b0c19053962c07dbda38332dcebf26",
         "type": "github"
       },
       "original": {
@@ -19,11 +19,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1704060006,
-        "narHash": "sha256-DJqxVZf35Gaw07Vt0qT1cS0pqfzZiuB+WfLTJNJdbgY=",
+        "lastModified": 1705649265,
+        "narHash": "sha256-px9fZZexVjqlQeo5vhICRa7rs4xxlNqOB+Cow/aD4lo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e5af05cbf33cf3d4148a4a1ce6cab1c5fb8fec09",
+        "rev": "0799f514b1cd74878174939df79ac60ca5036673",
         "type": "github"
       },
       "original": {
@@ -65,11 +65,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1704071695,
-        "narHash": "sha256-RpBZTlK/rzHjXTsYLyfm5bilVqxuwYMJGT1POjOZFE8=",
+        "lastModified": 1705626525,
+        "narHash": "sha256-vsR2E/I94UherGkIC59ple9FfXa7+S5hbPtGQOZRgTI=",
         "ref": "refs/heads/main",
-        "rev": "b5520bfb546d8a2087410a1a5044a3515f284336",
-        "revCount": 27,
+        "rev": "ee7cf1f1f096cc2c18b87ae84048bab07f545d18",
+        "revCount": 31,
         "type": "git",
         "url": "ssh://git@github.com/TaserudConsulting/web-iso-flags"
       },
