@@ -65,17 +65,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1705626525,
-        "narHash": "sha256-vsR2E/I94UherGkIC59ple9FfXa7+S5hbPtGQOZRgTI=",
-        "ref": "refs/heads/main",
-        "rev": "ee7cf1f1f096cc2c18b87ae84048bab07f545d18",
-        "revCount": 31,
-        "type": "git",
-        "url": "ssh://git@github.com/TaserudConsulting/web-iso-flags"
+        "lastModified": 1707323541,
+        "narHash": "sha256-ACtcswxvKlPf3RtLO59BexMIdXzinGOwu0RdSIZ6DUw=",
+        "owner": "TaserudConsulting",
+        "repo": "web-iso-flags",
+        "rev": "c452fedea4b45350d8686334dfa891b1d2cdfa91",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "ssh://git@github.com/TaserudConsulting/web-iso-flags"
+        "owner": "TaserudConsulting",
+        "repo": "web-iso-flags",
+        "type": "github"
       }
     }
   },
