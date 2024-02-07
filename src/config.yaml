@@ -9,7 +9,6 @@ disableKinds:
 
 params:
   copyrightOwner: 2022 Elis Hirwing, 2023 Taserud Consulting AB
-  showAttribution: true
 
   # Extra head content to render within the <head> tag
   extraHeadContent: ''

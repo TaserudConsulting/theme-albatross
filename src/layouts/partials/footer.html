@@ -1,12 +1,13 @@
 <footer class="footer">
     <div class="content">
+        {{ if isset .Site.Params "copyrightowner" }}
         <p>
-            Copyright &copy; {{ cond (isset .Site.Params "copyrightowner") .Site.Params.copyrightowner "2022 Elis Hirwing, 2023 Taserud Consulting AB" }}.
-        </p>
-        {{ if .Site.Params.showAttribution }}
-        <p>
-            {{ i18n "footer-made-by-taserud-consulting-ab" | markdownify }}
+            Copyright &copy; {{ .Site.Params.copyrightOwner }}
         </p>
         {{ end }}
+        <p>
+            Made with <i class="fa-solid fa-heart" style="color: red"></i> in Arvika
+            by <a href="https://taserud.net" target="_blank">Taserud Consulting AB</a>.
+        </p>
     </div>
 </footer>
