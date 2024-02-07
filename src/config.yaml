@@ -39,6 +39,10 @@ params:
     # Font family
     font-family: sans
 
+    # Toggle to enable or disable the CSS rules for the food menu layout,
+    # set to 'true' to enable or 'false' to disable.
+    page-include-food-menu-styles: 'true'
+
     # Light colors
     light-background-color: '#FBF9FA' # Seasalt
     light-border-color: '#000000' # Black
