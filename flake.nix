@@ -83,7 +83,16 @@
 
       buildInputs = [self.packages.${system}.hugo];
 
-      buildPhase = "cd test && hugo --logLevel debug";
+      buildPhase = ''
+        # Install iso flags resources
+        install -m 644 -D ${self.packages.${system}.web-iso-flags}/* -t src/static/img/iso-flags
+
+        # Install fontawesome resources
+        install -m 644 -D ${self.packages.${system}.fontawesome}/scss/* -t src/assets/scss/fontawesome
+        install -m 644 -D ${self.packages.${system}.fontawesome}/webfonts/* -t src/static/fonts/fontawesome
+
+        cd test && hugo --logLevel debug
+      '';
       installPhase = "cp -vr public/ $out";
     };
   }));
