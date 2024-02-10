@@ -1,0 +1,34 @@
+---
+name: Check
+
+'on':
+  push:
+    branches:
+      - main
+
+jobs:
+  format:
+    name: File formatting
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DeterminateSystems/nix-installer-action@v6
+      - uses: DeterminateSystems/magic-nix-cache-action@v2
+
+      - run: 'nix fmt . -- --check'
+      - run: 'nix run nixpkgs#yamllint -- --strict --format github .'
+      - run: 'nix run nixpkgs#deadnix -- .'
+      - run: 'nix run nixpkgs#statix -- check'
+
+  check:
+    name: Check flake
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4.1.1
+
+      - uses: DeterminateSystems/nix-installer-action@v6
+      - uses: DeterminateSystems/magic-nix-cache-action@v2
+
+      - run: 'nix flake check'
+      - run: 'nix build .#theme'
