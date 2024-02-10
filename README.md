@@ -1,3 +1,6 @@
+[![Check](https://github.com/TaserudConsulting/theme-albatross/actions/workflows/check.yml/badge.svg)](https://github.com/TaserudConsulting/theme-albatross/actions/workflows/check.yml)
+[![Update](https://github.com/TaserudConsulting/theme-albatross/actions/workflows/update.yml/badge.svg)](https://github.com/TaserudConsulting/theme-albatross/actions/workflows/update.yml)
+
 # Taserud Consulting AB Theme: Albatross
 
 This is a hugo theme for Taserud Consulting AB. It's quite flexible.
