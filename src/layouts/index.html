@@ -12,7 +12,7 @@
         {{ range $paginator.Pages }}
         <div class="post">
             <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-            <span class="post-date">
+            <span class="post-meta">
                 {{ .Date.Format "2006-01-02" }}
                 {{ if not .Site.Params.hideReadingTime }}
                     &middot; {{ .ReadingTime }} {{ i18n "minute-read" }}
