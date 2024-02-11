@@ -323,6 +323,7 @@ html {
                 h2,
                 h3,
                 h4,
+                div,
                 p {
                     margin-top: 1rem;
                     margin-bottom: 1rem;
@@ -342,16 +343,6 @@ html {
 
                 h4 {
                     font-size: #{$font-size-h4}rem;
-                }
-
-                >h1,
-                >h2,
-                >h3,
-                >h4,
-                >div,
-                >p {
-                    margin-top: 1rem;
-                    margin-bottom: 1rem;
                 }
 
                 // Make lists look decent with some margins
