@@ -1,8 +1,8 @@
 ---
-title: Startsida
+title: Startpage
 showPostsListing: true
 ---
-Ikon test med fontawesome: {{< fa fab github 2x >}}
+Icon test with fontawesome: {{< fa fab github 2x >}}
 
 Magni fuga excepturi placeat. Hic perferendis eaque rerum rerum earum
 error autem consequatur. Impedit velit voluptate possimus consequatur

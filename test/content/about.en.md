@@ -1,14 +1,14 @@
 ---
-title: Om oss
+title: About us
 ---
 Eligendi nobis architecto qui. Deserunt qui omnis excepturi ipsam
 ullam dolorem tempore. Impedit at aut doloribus. Quos quisquam eos
 voluptatum laudantium laudantium numquam. Velit vero mollitia
 provident sapiente et veritatis ut rerum.
 
-Internlänkstest: [Startsida](/), [Saknad sida](/foobar)
+Internal links test: [Start page](/en), [Bad page](/en/foobar)
 
-## Heading level 2: Oordnad lista
+## Heading level 2: Unordered list
 - Ut ullam itaque aperiam necessitatibus nihil. Id nesciunt in
   provident reprehenderit. Rerum perspiciatis laudantium molestias
   voluptatem sit voluptas. Est tenetur libero repellat beatae.
@@ -19,7 +19,7 @@ Internlänkstest: [Startsida](/), [Saknad sida](/foobar)
   provident reprehenderit. Rerum perspiciatis laudantium molestias
   voluptatem sit voluptas. Est tenetur libero repellat beatae.
 
-### Heading level 3: Numerisk lista
+### Heading level 3: Numeric list
 1. Sit inventore corrupti corporis voluptate. Cumque deleniti officia
    doloribus reprehenderit iste. Minus consectetur facere deleniti eum
    est aut quo tempore. Tempore maiores commodi est porro reiciendis
@@ -33,7 +33,7 @@ Internlänkstest: [Startsida](/), [Saknad sida](/foobar)
    est aut quo tempore. Tempore maiores commodi est porro reiciendis
    voluptates.
 
-#### Heading level 4: Citatblock
+#### Heading level 4: Block quotes
 > Consectetur dolores nihil dolorem. Qui deleniti eligendi et. Autem
 > laboriosam labore non. Ut eos et repudiandae labore officiis quis
 > explicabo qui.
@@ -42,7 +42,7 @@ Internlänkstest: [Startsida](/), [Saknad sida](/foobar)
 > laboriosam labore non. Ut eos et repudiandae labore officiis quis
 > explicabo qui.
 
-#### Heading level 4: Kodblock
+#### Heading level 4: Code blocks
 ```nix
 { ... }:
 let

@@ -1,6 +1,7 @@
 ---
 date: "2023-12-26T21:00:00+01:00"
-description: test post
-title: Test post
+description: Min test post
+title: Min test post
+tags: [test-sv]
 ---
-This is a test post.
+Detta är en test post

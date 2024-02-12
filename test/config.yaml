@@ -8,21 +8,47 @@ languages:
     languageCode: sv-se
 
     params:
-      home: Startpage
+      home: Startsida
       homeUrl: /
 
     menu:
       main:
-        - name: Menu
+        - name: Meny
           url: /menu/
           weight: 10
 
-        - name: About
+        - name: Om
           url: /about/
           weight: 20
 
-        - name: Blog
+        - name: Blogg
           url: /blog/
+          weight: 30
+
+      i18n:
+        - name: gb
+          url: /en
+          weight: 10
+
+  en:
+    languageCode: en-us
+
+    params:
+      home: Startpage
+      homeUrl: /en
+
+    menu:
+      main:
+        - name: Menu
+          url: /en/menu/
+          weight: 10
+
+        - name: About
+          url: /en/about/
+          weight: 20
+
+        - name: Blog
+          url: /en/blog/
           weight: 30
 
       i18n:

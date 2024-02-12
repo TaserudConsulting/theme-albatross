@@ -1,19 +1,19 @@
 ---
-title: Meny
+title: Menu
 type: food-menu-basic-list
 foodmenus:
-  - title: Huvudrätter
+  - title: Main courses
     items:
       - name: 1. Beyond Burger
         price: 99kr
-        ingredients: [ "beyond burger", bröd, tomat, pommes ]
+        ingredients: [ "beyond burger", bread, tomato, fries ]
         allergens: [ Soy, Gluten ]
         flags: [ vegan, vegetarian ]
-      - name: 2. Potatis
+      - name: 2. Potatoes
         price: 59kr
-        ingredients: [ potatis ]
+        ingredients: [ potatoes ]
         flags: [ vegan, gluten-free, vegetarian ]
-      - name: 3. Tomatsallad
+      - name: 3. Tomatosallad
         price: 49kr
         ingredients: [ Tomatoes ]
         flags: [ vegan, gluten-free, vegetarian ]
@@ -22,13 +22,13 @@ foodmenus:
         ingredients: [ "Black beans", Garlic, Herbs, Vinegar ]
         flags: [ vegan, gluten-free, vegetarian ]
 
-  - title: Efterrätter
+  - title: Desserts
     items:
-      - name: 5. Nötkräm med choklad
+      - name: 5. Nut creme with chocolate
         price: 59kr
-        ingredients: [ "nötkräm", choklad ]
+        ingredients: [ "Nut creme", chocolate ]
         flags: [ vegan, gluten-free ]
-      - name: 6. Sur mango
+      - name: 6. Sour mango
         price: 59kr
         ingredients: [ Lime, Mango ]
         flags: [ vegan, gluten-free ]
@@ -39,4 +39,4 @@ foodmenuflags:
   gluten-free: Gluten free
 ---
 
-Detta är innehållet på sidan.
+This is the content of the page.
