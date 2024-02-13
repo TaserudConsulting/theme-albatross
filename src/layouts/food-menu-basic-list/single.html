@@ -1,59 +1,60 @@
 {{ define "main" }}
 <div class="content">
     {{ if (.Title | len) }}
-    <h1>{{ .Title }}</h1>
+        <h1>{{ .Title }}</h1>
     {{ end }}
+
     <p>
         {{ .Content }}
     </p>
 
     {{ range $_, $menu := .Params.foodmenus }}
-    <div class="food-menu">
-        <h2>{{ $menu.title }}</h2>
-        <ul class="items">
-            {{ range $_, $item := $menu.items }}
-            <li class="item">
-                <span class="title">{{ $item.name }}</span>
-                {{ if isset $item "price" }}
-                <span class="price">{{ $item.price }}</span>
+        <div class="food-menu">
+            <h2>{{ $menu.title }}</h2>
+            <ul class="items">
+                {{ range $_, $item := $menu.items }}
+                    <li class="item">
+                        <span class="title">{{ $item.name }}</span>
+                        {{ if isset $item "price" }}
+                            <span class="price">{{ $item.price }}</span>
+                        {{ end }}
+                        {{ if or (isset $item "ingredients") (isset $item "allergens") }}
+                            <div class="ingredients">
+                                {{ if isset $item "ingredients" }}
+                                    <p>
+                                        <span>{{ i18n "foodmenu-contains" }}</span> {{ delimit $item.ingredients ", " }}
+                                    </p>
+                                {{ end }}
+                                {{ if isset $item "allergens" }}
+                                    <p>
+                                        <span>{{ i18n "foodmenu-allergens" }}</span> {{ delimit $item.allergens ", " }}
+                                    </p>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                        {{ if isset $item "flags" }}
+                            <div class="flags">
+                                {{ range $_, $flag := $item.flags }}
+                                    <span class="flag {{ $flag }}"></span>
+                                {{ end }}
+                            </div>
+                        {{ end }}
+                    </li>
                 {{ end }}
-                {{ if or (isset $item "ingredients") (isset $item "allergens") }}
-                <div class="ingredients">
-                    {{ if isset $item "ingredients" }}
-                    <p>
-                        <span>{{ i18n "foodmenu-contains" }}</span> {{ delimit $item.ingredients ", " }}
-                    </p>
-                    {{ end }}
-                    {{ if isset $item "allergens" }}
-                    <p>
-                        <span>{{ i18n "foodmenu-allergens" }}</span> {{ delimit $item.allergens ", " }}
-                    </p>
-                    {{ end }}
-                </div>
-                {{ end }}
-                {{ if isset $item "flags" }}
-                <div class="flags">
-                    {{ range $_, $flag := $item.flags }}
-                    <span class="flag {{ $flag }}"></span>
-                    {{ end }}
-                </div>
-                {{ end }}
-            </li>
-            {{ end }}
-        </ul>
-    </div>
+            </ul>
+        </div>
     {{ end }}
 
     {{ if isset .Params "foodmenuflags" }}
-    <div class="food-menu-flags">
-        <h2>{{ i18n "foodmenu-symboldescriptions" }}</h2>
+        <div class="food-menu-flags">
+            <h2>{{ i18n "foodmenu-symboldescriptions" }}</h2>
 
-        <ul class="flags">
-            {{ range $flag, $description := .Params.foodmenuflags }}
-            <li><span class="flag {{ $flag }}"></span> - {{ $description }}</li>
-            {{ end }}
-        </ul>
-    </div>
+            <ul class="flags">
+                {{ range $flag, $description := .Params.foodmenuflags }}
+                    <li><span class="flag {{ $flag }}"></span> - {{ $description }}</li>
+                {{ end }}
+            </ul>
+        </div>
     {{ end }}
 </div>
 {{ end }}
