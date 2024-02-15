@@ -17,8 +17,16 @@
                     <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
                     <span class="post-meta">
                         {{ .Date.Format "2006-01-02" }}
+
                         {{ if not .Site.Params.hideReadingTime }}
                             &middot; {{ .ReadingTime }} {{ i18n "minute-read" }}
+                        {{ end }}
+
+                        {{ if isset .Params "tags" }}
+                            &middot;
+                            {{ range .GetTerms "tags" }}
+                                <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            {{ end }}
                         {{ end }}
                     </span>
 

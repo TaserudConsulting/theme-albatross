@@ -35,6 +35,8 @@ $fa-font-path: "/fonts/fontawesome";
         --food-menu-flags-vegetarian-foreground-color: #{$light-food-menu-flags-vegetarian-foreground-color};
     }
 
+    --content-tag-background-color: #{$light-tag-background-color};
+    --content-tag-foreground-color: #{contrast-color($light-foreground-color, $light-tag-background-color)};
     --foreground-color: #{$light-foreground-color};
     --link-default-color: #{$light-link-default-color};
     --link-visited-color: #{$light-link-visited-color};
@@ -58,6 +60,8 @@ $fa-font-path: "/fonts/fontawesome";
         --food-menu-flags-vegetarian-foreground-color: #{$dark-food-menu-flags-vegetarian-foreground-color};
     }
 
+    --content-tag-background-color: #{$dark-tag-background-color};
+    --content-tag-foreground-color: #{contrast-color($dark-foreground-color, $dark-tag-background-color)};
     --foreground-color: #{$dark-foreground-color};
     --link-default-color: #{$dark-link-default-color};
     --link-visited-color: #{$dark-link-visited-color};
@@ -343,6 +347,17 @@ html {
 
                 h4 {
                     font-size: #{$font-size-h4}rem;
+                }
+
+                span.post-meta a.tag {
+                    display: inline-block;
+                    padding: .25rem .75rem;
+                    margin: 0 .5rem;
+                    border-radius: .25rem;
+                    white-space: nowrap;
+
+                    background: var(--content-tag-background-color);
+                    color: var(--content-tag-foreground-color);
                 }
 
                 // Make lists look decent with some margins

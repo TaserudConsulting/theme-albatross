@@ -4,10 +4,6 @@ title: Albatross theme - Taserud Consulting AB
 defaultContentLanguage: sv
 theme: albatross
 
-disableKinds:
-  - taxonomy
-  - term
-
 params:
   copyrightOwner: 2022 Elis Hirwing, 2023 Taserud Consulting AB
 
@@ -59,6 +55,7 @@ params:
     light-food-menu-flags-vegan-foreground-color: 'contrast-color(#000000, $light-food-menu-flags-vegan-background-color)'  # Black, Office Green
     light-food-menu-flags-vegetarian-background-color: '#6BE06B'  # Malachite
     light-food-menu-flags-vegetarian-foreground-color: 'contrast-color(#000000, $light-food-menu-flags-vegetarian-background-color)'  # Black, Office Green
+    light-tag-background-color: 'darken($light-background-color, 10%)'  # Seasalt
 
 
     # Dark colors
@@ -77,3 +74,4 @@ params:
     dark-food-menu-flags-vegan-foreground-color: 'contrast-color(#FFFFFF, $dark-food-menu-flags-vegan-background-color)'  # White, Office Green
     dark-food-menu-flags-vegetarian-background-color: '#006400'  # Office Green
     dark-food-menu-flags-vegetarian-foreground-color: 'contrast-color(#FFFFFF, $dark-food-menu-flags-vegetarian-background-color)'  # White, Office Green
+    dark-tag-background-color: 'lighten($dark-background-color, 10%)'  # Jet
