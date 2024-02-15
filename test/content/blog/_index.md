@@ -1,3 +1,3 @@
 ---
-title: Albatross blog
+title: Albatross blogg
 ---
