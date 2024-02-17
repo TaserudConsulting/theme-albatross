@@ -30,15 +30,9 @@
                         {{ end }}
                     </span>
 
-                    {{ if eq .Site.Params.truncate false }}
-                        {{ .Content }}
-                    {{ else if .Description }}
-                        <p>{{ .Description }}</p>
-                        <a href="{{ .RelPermalink }}">{{ i18n "read-on" }} &rarr;</a>
-                    {{ else }}
-                        <p>{{ .Summary }}</p>
-                        {{ if .Truncated }}<a href="{{ .RelPermalink }}">{{ i18n "read-on" }} &rarr;</a>{{ end }}
-                    {{ end }}
+                    <p>{{ .Summary }}</p>
+
+                    <a href="{{ .RelPermalink }}">{{ i18n "read-on" }} &rarr;</a>
                 </div>
             {{ end }}
             <div class="pagination">
