@@ -11,7 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Add link to atom feed -->
-    <link rel="alternate" type="application/atom+xml" href="{{ printf "%sindex.xml" .Site.Params.homeUrl | absURL }}" title="{{ .Site.Title }}" />
+    {{ if .Site.RSSLink }}
+        <link href="{{ .Site.RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+        <link href="{{ .Site.RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ .Site.Params.iconPath | absURL }}" />
