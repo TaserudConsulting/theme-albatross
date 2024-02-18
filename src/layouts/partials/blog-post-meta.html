@@ -5,6 +5,19 @@
         &middot; {{ .ReadingTime }} {{ i18n "minute-read" }}
     {{ end }}
 
+    {{ if (.Translations | len) }}
+        &middot;
+        {{ range .Translations }}
+            {{ if .IsTranslated }}
+                <a href="{{ .RelPermalink }}" class="translation">
+                    {{- with index .Site.Params.languageCode2FlagName .Language.LanguageCode -}}
+                        <img src="{{ printf "/img/iso-flags/%s.svg" . | relURL }}" alt="{{ . }} translation" />
+                    {{- end -}}
+                </a>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
     {{ if isset .Params "tags" }}
         &middot;
         {{ range .GetTerms "tags" }}

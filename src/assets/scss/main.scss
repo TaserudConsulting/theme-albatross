@@ -349,15 +349,24 @@ html {
                     font-size: #{$font-size-h4}rem;
                 }
 
-                span.post-meta a.tag {
-                    display: inline-block;
-                    padding: .25rem .75rem;
-                    margin: 0 .5rem;
-                    border-radius: .25rem;
-                    white-space: nowrap;
+                span.post-meta {
+                    a.translation {
+                        img {
+                            width: 3rem;
+                            vertical-align: bottom;
+                        }
+                    }
 
-                    background: var(--content-tag-background-color);
-                    color: var(--content-tag-foreground-color);
+                    a.tag {
+                        display: inline-block;
+                        padding: .25rem .75rem;
+                        margin: 0 .5rem;
+                        border-radius: .25rem;
+                        white-space: nowrap;
+
+                        background: var(--content-tag-background-color);
+                        color: var(--content-tag-foreground-color);
+                    }
                 }
 
                 // Make lists look decent with some margins

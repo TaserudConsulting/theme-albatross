@@ -18,6 +18,11 @@ params:
   # Site wide open graph image to use for sharing
   ogImagePath: /img/albatross_logo.png
 
+  # Language code to flag name mapping for the language switcher
+  languageCode2FlagName:
+    sv-se: 'se'
+    en-gb: 'gb'
+
   style:
     # Base font size in px
     font-size: 18
