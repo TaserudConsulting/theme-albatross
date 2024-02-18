@@ -31,7 +31,7 @@ languages:
           weight: 10
 
   en:
-    languageCode: en-us
+    languageCode: en-gb
 
     params:
       home: Startpage
