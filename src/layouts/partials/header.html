@@ -5,7 +5,7 @@
                 {{ range .Site.Menus.i18n }}
                     <li>
                         <a href="{{ .URL | relURL }}">
-                            <img src="{{ printf "/img/iso-flags/%s.svg" .Name | absURL }}" alt="{{ .Name }} flag" />
+                            <img src="{{ printf "/img/iso-flags/%s.svg" .Name | relURL }}" alt="{{ .Name }} flag" />
                         </a>
                     </li>
                 {{ end }}
