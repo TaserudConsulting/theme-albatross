@@ -36,7 +36,7 @@
     <meta property="og:url" content="{{ .Permalink }}" />
     {{ if .Params.ogImagePath }}
     <meta property="og:image" content="{{ .Params.ogImagePath | absURL }}" />
-    {{ else }}
+    {{ else if .Site.Params.ogImagePath }}
     <meta property="og:image" content="{{ .Site.Params.ogImagePath | absURL }}" />
     {{ end }}
     <meta name="twitter:card" content="summary_large_image" />
