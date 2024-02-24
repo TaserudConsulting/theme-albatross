@@ -12,15 +12,19 @@
             </ul>
         </div>
     {{ end }}
-    <div class="logo">
-        <a href="{{ .Site.Params.homeUrl | relURL }}">
-            <picture>
-                <source srcset="{{ .Site.Params.darkLogoPath | relURL }}" media="(prefers-color-scheme: dark)" />
-                <source srcset="{{ .Site.Params.lightLogoPath | relURL }}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-                <img src="{{ .Site.Params.lightLogoPath | relURL }}" alt="Logo of {{ .Site.Title }}" />
-            </picture>
-        </a>
-    </div>
+    {{ if .Site.Params.showLogo }}
+        <div class="logo">
+            <a href="{{ .Site.Params.homeUrl | relURL }}">
+                <picture>
+                    <source srcset="{{ .Site.Params.darkLogoPath | relURL }}" media="(prefers-color-scheme: dark)" />
+                    <source srcset="{{ .Site.Params.lightLogoPath | relURL }}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+                    <img src="{{ .Site.Params.lightLogoPath | relURL }}" alt="Logo of {{ .Site.Title }}" />
+                </picture>
+            </a>
+        </div>
+    {{ end }}
+    <!-- Extra header content -->
+    {{ .Site.Params.extraHeaderContent | safeHTML }}
     <nav>
         {{ if (isset .Site.Menus "main") }}
             <ul>

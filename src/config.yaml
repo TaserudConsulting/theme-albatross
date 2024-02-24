@@ -10,10 +10,18 @@ params:
   # Extra head content to render within the <head> tag
   extraHeadContent: ''
 
+  # Extra header content to render within the <header> tag before the menu
+  extraHeaderContent: ''
+
   # Dark and light logo paths as well as icon path
   darkLogoPath: /img/albatross_logo.png
   lightLogoPath: /img/albatross_logo.png
+
+  # Favicon logo, if set to false, it's hidden
   iconPath: /img/albatross_icon.png
+
+  # Show logo at top
+  showLogo: true
 
   # Site wide open graph image to use for sharing
   ogImagePath: /img/albatross_logo.png
