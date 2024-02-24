@@ -1,5 +1,21 @@
 <header>
-    {{ if (isset .Site.Menus "i18n") }}
+    {{ if (.Translations | len) }}
+        <div class="i18n">
+            <ul>
+                {{ range .Translations }}
+                    {{ if .IsTranslated }}
+                        <li>
+                            <a href="{{ .RelPermalink }}" class="translation">
+                                {{- with index .Site.Params.languageCode2FlagName .Language.LanguageCode -}}
+                                    <img src="{{ printf "/img/iso-flags/%s.svg" . | relURL }}" alt="{{ . }} translation" />
+                                {{- end -}}
+                            </a>
+                        </li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    {{ else if (isset .Site.Menus "i18n") }}
         <div class="i18n">
             <ul>
                 {{ range .Site.Menus.i18n }}
