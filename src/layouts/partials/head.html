@@ -20,7 +20,9 @@
     {{ end }}
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ .Site.Params.iconPath | absURL }}" />
+    {{ if .Site.Params.iconPath }}
+        <link rel="icon" type="image/png" href="{{ .Site.Params.iconPath | absURL }}" />
+    {{ end }}
 
     <!-- Meta description for SEO description -->
     <meta property="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
