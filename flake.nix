@@ -90,7 +90,7 @@
         install -m 644 -D ${self.packages.${system}.fontawesome}/scss/* -t src/assets/scss/fontawesome
         install -m 644 -D ${self.packages.${system}.fontawesome}/webfonts/* -t src/static/fonts/fontawesome
 
-        cd test && hugo --logLevel debug
+        cd test && hugo --logLevel debug --minify
       '';
       installPhase = "cp -vr public/ $out";
     };
