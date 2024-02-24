@@ -22,6 +22,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ .Site.Params.iconPath | absURL }}" />
 
+    <!-- Meta description for SEO description -->
+    <meta property="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+
     <!-- Open graph -->
     <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
     <meta property="og:locale" content="{{ slicestr .Site.LanguageCode 0 2 }}" />
