@@ -19,4 +19,4 @@ cd test/
 
 sleep 1 && xdg-open "http://localhost:1313/" &
 
-nix run .#hugo -- server --logLevel debug --disableFastRender --minify
+nix run .#hugo -- server --logLevel debug --disableFastRender --gc

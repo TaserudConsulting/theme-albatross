@@ -17,4 +17,4 @@ install -m 644 -D $(nix build .#fontawesome --print-out-paths --no-link)/webfont
 
 cd test/
 
-nix run .#hugo -- --gc --minify
+nix run .#hugo -- --gc
