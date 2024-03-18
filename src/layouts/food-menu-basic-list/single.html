@@ -4,9 +4,7 @@
         <h1>{{ .Title }}</h1>
     {{ end }}
 
-    <p>
-        {{ .Content }}
-    </p>
+    {{ .Content }}
 
     {{ range $_, $menu := .Params.foodmenus }}
         <div class="food-menu">

@@ -4,9 +4,7 @@
         <h1>{{ .Title }}</h1>
     {{ end }}
 
-    <p>
-        {{ .Content }}
-    </p>
+    {{ .Content }}
 
     <div class="posts">
         {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
