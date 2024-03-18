@@ -33,7 +33,7 @@
             <a href="{{ .Site.Params.homeUrl | relURL }}">
                 <picture>
                     <source srcset="{{ .Site.Params.darkLogoPath | relURL }}" media="(prefers-color-scheme: dark)">
-                    <source srcset="{{ .Site.Params.lightLogoPath | relURL }}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+                    <source srcset="{{ .Site.Params.lightLogoPath | relURL }}" media="(prefers-color-scheme: light)">
                     <img src="{{ .Site.Params.lightLogoPath | relURL }}" alt="Logo of {{ .Site.Title }}">
                 </picture>
             </a>
