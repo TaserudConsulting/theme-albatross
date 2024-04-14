@@ -14,6 +14,7 @@ mkdir -p src/assets/scss/fontawesome
 mkdir -p src/static/fonts/fontawesome
 install -m 644 -D $(nix build .#fontawesome --print-out-paths --no-link)/scss/* -t src/assets/scss/fontawesome
 install -m 644 -D $(nix build .#fontawesome --print-out-paths --no-link)/webfonts/* -t src/static/fonts/fontawesome
+install -m 644 -D $(nix build .#modelViewer --print-out-paths --no-link)/* -t src/static/js
 
 cd test/
 

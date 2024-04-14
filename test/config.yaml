@@ -25,6 +25,10 @@ languages:
           url: /blog/
           weight: 30
 
+        - name: 3D Modeller
+          url: /3d-models/
+          weight: 40
+
       i18n:
         - name: gb
           url: /en
@@ -50,6 +54,10 @@ languages:
         - name: Blog
           url: /en/blog/
           weight: 30
+
+        - name: 3D Models
+          url: /en/3d-models/
+          weight: 40
 
       i18n:
         - name: se

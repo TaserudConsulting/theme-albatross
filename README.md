@@ -13,3 +13,4 @@ This is a hugo theme for Taserud Consulting AB. It's quite flexible.
 - Blog support
 - Multi language support
 - Support for resturant style menu pages
+- Support for 3d models with an embedded viewer on listing page

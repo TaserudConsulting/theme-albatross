@@ -53,6 +53,9 @@
           # Install fontawesome resources
           install -m 644 -D ${self.packages.${system}.fontawesome}/scss/* -t $out/assets/scss/fontawesome
           install -m 644 -D ${self.packages.${system}.fontawesome}/webfonts/* -t $out/static/fonts/fontawesome
+
+          # Install model viewer resources
+          install -m 644 -D ${self.packages.${system}.modelViewer}/* -t $out/static/js
         '';
       };
 
@@ -69,8 +72,24 @@
             hash = "sha256-gXXhKyTDC/Q6PBzpWRFvx/TxcUd3msaRSdC3ZHFzCoc=";
           };
 
-          buildPhase = ":";
+          dontBuild = true;
           installPhase = "mkdir -p $out && cp -vr scss webfonts $out";
+        };
+
+      modelViewer = let
+        pname = "model-viewer";
+        version = "3.4.0";
+      in
+        pkgs.stdenv.mkDerivation {
+          inherit pname version;
+          src = builtins.fetchurl {
+            url = "https://ajax.googleapis.com/ajax/libs/${pname}/${version}/${pname}.min.js";
+            sha256 = "sha256:0xalmzv5ds908fh7jazmy8jjcnz240mlrll61ylfg2k6scm8jpjk";
+          };
+          dontUnpack = true;
+          dontBuild = true;
+          installPhase = "mkdir -p $out && cp -v $src $out/${pname}.min.js";
+          meta.license = pkgs.lib.licenses.bsd3;
         };
     };
 
@@ -89,6 +108,9 @@
         # Install fontawesome resources
         install -m 644 -D ${self.packages.${system}.fontawesome}/scss/* -t src/assets/scss/fontawesome
         install -m 644 -D ${self.packages.${system}.fontawesome}/webfonts/* -t src/static/fonts/fontawesome
+
+        # Install model viewer resources
+        install -m 644 -D ${self.packages.${system}.modelViewer}/* -t src/static/js
 
         cd test && hugo --logLevel debug
       '';

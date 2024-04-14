@@ -6,7 +6,8 @@ test/.hugo_build.lock
 test/public/
 test/resources/
 
-# Ignore symlinked iso flags and fontawesome
-src/static/img/iso-flags
+# Ignore symlinked iso flags, fontawesome and model viewer
 src/assets/scss/fontawesome
+src/static/img/iso-flags
+src/static/js
 src/static/fonts/fontawesome
