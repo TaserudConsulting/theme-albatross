@@ -4,6 +4,7 @@ type: 3d-models
 model3d:
   - title: Test visning av Neil Armstrong
     description: Detta är ett test med en 3d-modell av Neil Armstrong
+    homepage: https://example.org/
     files:
       - name: NeilArmstrong.3mf
         modelFile: https://via.placeholder.com/150

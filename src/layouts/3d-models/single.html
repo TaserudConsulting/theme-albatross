@@ -14,7 +14,7 @@
             {{ range $_, $model := .Params.model3d }}
                 <div class="model3d">
                     <h2>{{ $model.title }}</h2>
-                    {{ if isset $model "description" }}
+                    {{ if and (isset $model "description") (gt (len $model.description) 0) }}
                         <p>{{ $model.description }}</p>
                     {{ end }}
                     {{ range $_, $file := $model.files }}
@@ -29,7 +29,7 @@
                               ar-status="not-presenting"></model-viewer>
                         </div>
                     {{ end }}
-                    {{ if isset $model "homepage"}}
+                    {{ if and (isset $model "homepage") (gt (len $model.homepage) 0) }}
                         <p>Homepage: <a href="{{ $model.homepage }}">{{ $model.homepage }}</a></p>
                     {{ end }}
                     {{ if isset $model "license" }}
