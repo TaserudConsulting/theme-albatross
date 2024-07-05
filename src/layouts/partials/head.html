@@ -45,12 +45,18 @@
     {{ .Site.Params.extraHeadContent | safeHTML }}
 
     <!-- SCSS -->
-    {{ $options := (dict "targetPath" "css/style.css"
-                         "vars" site.Params.style
-                         "transpiler" "dartsass"
-                         "outputStyle" "compressed"
-                         "enableSourceMap" (not hugo.IsProduction)
-                         "includePaths" (slice "node_modules/myscss")) }}
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
+    {{ with resources.Get "scss/main.scss" }}
+        {{ $opts := (dict "targetPath" "css/style.css"
+                          "vars" site.Params.style
+                          "transpiler" "dartsass") }}
+        {{ with . | toCSS $opts }}
+            {{ if hugo.IsDevelopment }}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" media="screen">
+            {{ else }}
+                {{ with . | minify | fingerprint }}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" media="screen">
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
 </head>
