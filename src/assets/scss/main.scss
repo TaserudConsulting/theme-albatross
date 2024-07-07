@@ -26,7 +26,7 @@ $fa-font-path: "/fonts/fontawesome";
     --background-color: #{$light-background-color};
     --border-color: #{$light-border-color};
 
-    @if $page-include-food-menu-styles =='true' {
+    @if $page-include-food-menu-styles == 'true' {
         --food-menu-flags-gluten-free-background-color: #{$light-food-menu-flags-gluten-free-background-color};
         --food-menu-flags-gluten-free-foreground-color: #{$light-food-menu-flags-gluten-free-foreground-color};
         --food-menu-flags-vegan-background-color: #{$light-food-menu-flags-vegan-background-color};
@@ -51,7 +51,7 @@ $fa-font-path: "/fonts/fontawesome";
     --background-color: #{$dark-background-color};
     --border-color: #{$dark-border-color};
 
-    @if $page-include-food-menu-styles =='true' {
+    @if $page-include-food-menu-styles == 'true' {
         --food-menu-flags-gluten-free-background-color: #{$dark-food-menu-flags-gluten-free-background-color};
         --food-menu-flags-gluten-free-foreground-color: #{$dark-food-menu-flags-gluten-free-foreground-color};
         --food-menu-flags-vegan-background-color: #{$dark-food-menu-flags-vegan-background-color};
@@ -443,7 +443,7 @@ html {
                     }
                 }
 
-                @if $page-include-food-menu-styles =='true' {
+                @if $page-include-food-menu-styles == 'true' {
 
                     /*************************************************
                      * BEGIN FOOD MENU LAYOUT
