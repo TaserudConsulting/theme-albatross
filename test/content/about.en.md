@@ -50,3 +50,11 @@ let
  b = a 3
 in b
 ```
+
+Some `inline` highlights?
+
+#### Heading level 4: Code block with long line
+
+```sh
+curl -s https://example.com/this/is/a/very/dummy/url/that/is/just/long
+```

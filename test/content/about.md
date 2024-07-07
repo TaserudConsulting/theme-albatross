@@ -50,3 +50,11 @@ let
  b = a 3
 in b
 ```
+
+Lite `inline` highlight?
+
+#### Heading level 4: Kodblock med lång rad
+
+```sh
+curl -s https://example.com/this/is/a/very/dummy/url/that/is/just/long
+```

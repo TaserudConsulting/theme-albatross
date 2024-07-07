@@ -321,6 +321,7 @@ html {
 
                 @media only screen and (max-width: #{$page-content-width-factor * $font-size}px) {
                     min-width: 100%;
+                    max-width: 100%;
                 }
 
                 h1,
