@@ -192,6 +192,24 @@ html {
             &:visited {
                 color: var(--link-visited-color);
             }
+
+            &[href^="mailto"]::after,
+            &[href^="http"]::after,
+            &[href^="https://"]::after {
+                content: "";
+                width: 11px;
+                height: 11px;
+                margin-left: 4px;
+                background-image: url("/img/external-arrow-dark.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: inline-block;
+
+                @media (prefers-color-scheme: dark) {
+                    background-image: url("/img/external-arrow-light.svg");
+                }
+            }
         }
 
         /*************************************************************
