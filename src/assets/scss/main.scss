@@ -44,6 +44,10 @@ $fa-font-path: "/fonts/fontawesome";
     --menu-foreground: #{$light-menu-foreground};
     --menu-item-hover-background: #{$light-menu-item-hover-background};
     --menu-item-hover-foreground: #{$light-menu-item-hover-foreground};
+
+    // Code colors for inline code blocks
+    --code-background-color: #272822;
+    --code-foreground-color: #f8f8f2;
 }
 
 @mixin dark-theme() {
@@ -332,6 +336,12 @@ html {
                 p {
                     margin-top: 1rem;
                     margin-bottom: 1rem;
+
+                    > code {
+                        background: var(--code-background-color);
+                        color: var(--code-foreground-color);
+                        padding: 0.125rem;
+                    }
                 }
 
                 h1 {
