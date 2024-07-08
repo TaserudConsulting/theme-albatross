@@ -13,12 +13,11 @@ $fa-font-path: "/fonts/fontawesome";
 @import "lib/contrast";
 @import "hugo:vars";
 
-/********************************************************************
- * Helper mixins
+/*********************************************************************
+ * THEME
  */
 
-// Mixins with the variables for the color themes.
-@mixin light-theme() {
+:root {
     --font-family: #{$font-family};
     --font-size: #{$font-size}px;
 
@@ -50,42 +49,30 @@ $fa-font-path: "/fonts/fontawesome";
     --code-foreground-color: #f8f8f2;
 }
 
-@mixin dark-theme() {
-    // Colors
-    --background-color: #{$dark-background-color};
-    --border-color: #{$dark-border-color};
-
-    @if $page-include-food-menu-styles == 'true' {
-        --food-menu-flags-gluten-free-background-color: #{$dark-food-menu-flags-gluten-free-background-color};
-        --food-menu-flags-gluten-free-foreground-color: #{$dark-food-menu-flags-gluten-free-foreground-color};
-        --food-menu-flags-vegan-background-color: #{$dark-food-menu-flags-vegan-background-color};
-        --food-menu-flags-vegan-foreground-color: #{$dark-food-menu-flags-vegan-foreground-color};
-        --food-menu-flags-vegetarian-background-color: #{$dark-food-menu-flags-vegan-background-color};
-        --food-menu-flags-vegetarian-foreground-color: #{$dark-food-menu-flags-vegetarian-foreground-color};
-    }
-
-    --content-tag-background-color: #{$dark-tag-background-color};
-    --content-tag-foreground-color: #{contrast-color($dark-foreground-color, $dark-tag-background-color)};
-    --foreground-color: #{$dark-foreground-color};
-    --link-default-color: #{$dark-link-default-color};
-    --link-visited-color: #{$dark-link-visited-color};
-    --menu-background: #{$dark-menu-background};
-    --menu-foreground: #{$dark-menu-foreground};
-    --menu-item-hover-background: #{$dark-menu-item-hover-background};
-    --menu-item-hover-foreground: #{$dark-menu-item-hover-foreground};
-}
-
-/*********************************************************************
- * THEME
- */
-
-:root {
-    @include light-theme();
-}
-
 @media (prefers-color-scheme: dark) {
     :root {
-        @include dark-theme();
+        // Colors
+        --background-color: #{$dark-background-color};
+        --border-color: #{$dark-border-color};
+
+        @if $page-include-food-menu-styles == 'true' {
+            --food-menu-flags-gluten-free-background-color: #{$dark-food-menu-flags-gluten-free-background-color};
+            --food-menu-flags-gluten-free-foreground-color: #{$dark-food-menu-flags-gluten-free-foreground-color};
+            --food-menu-flags-vegan-background-color: #{$dark-food-menu-flags-vegan-background-color};
+            --food-menu-flags-vegan-foreground-color: #{$dark-food-menu-flags-vegan-foreground-color};
+            --food-menu-flags-vegetarian-background-color: #{$dark-food-menu-flags-vegan-background-color};
+            --food-menu-flags-vegetarian-foreground-color: #{$dark-food-menu-flags-vegetarian-foreground-color};
+        }
+
+        --content-tag-background-color: #{$dark-tag-background-color};
+        --content-tag-foreground-color: #{contrast-color($dark-foreground-color, $dark-tag-background-color)};
+        --foreground-color: #{$dark-foreground-color};
+        --link-default-color: #{$dark-link-default-color};
+        --link-visited-color: #{$dark-link-visited-color};
+        --menu-background: #{$dark-menu-background};
+        --menu-foreground: #{$dark-menu-foreground};
+        --menu-item-hover-background: #{$dark-menu-item-hover-background};
+        --menu-item-hover-foreground: #{$dark-menu-item-hover-foreground};
     }
 }
 
@@ -455,7 +442,6 @@ html {
                 }
 
                 @if $page-include-food-menu-styles == 'true' {
-
                     /*************************************************
                      * BEGIN FOOD MENU LAYOUT
                      */
