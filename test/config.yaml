@@ -3,6 +3,11 @@ title: Albatross test page - Taserud Consulting AB
 defaultContentLanguage: sv
 theme: albatross
 
+# Style code highlights with classes rather than inline styles.
+markup:
+  highlight:
+    noClasses: false
+
 languages:
   sv:
     languageCode: sv-se
