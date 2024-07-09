@@ -46,8 +46,8 @@ Internlänkstest: [Startsida](/), [Saknad sida](/foobar)
 ```nix
 { ... }:
 let
- a = a: a + a
- b = a 3
+  a = a: a + a
+  b = a 3
 in b
 ```
 
