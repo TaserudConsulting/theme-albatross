@@ -47,6 +47,20 @@ $fa-font-path: "/fonts/fontawesome";
     // Code colors for inline code blocks
     --code-background-color: #272822;
     --code-foreground-color: #f8f8f2;
+
+    // Code highlight colors
+    --code-chroma-bg: #272822;
+    --code-chroma-fg: #f8f8f2;
+    --code-chroma-dark-red-fg: #960050;
+    --code-chroma-dark-red-bg: #1e0010;
+    --code-chroma-dark-gray-fg: #3c3d38;
+    --code-chroma-light-gray-fg: #7f7f7f;
+    --code-chroma-light-blue-fg: #66d9ef;
+    --code-chroma-red-fg: #f92672;
+    --code-chroma-green-fg: #a6e22e;
+    --code-chroma-purple-fg: #ae81ff;
+    --code-chroma-yellow-fg: #e6db74;
+    --code-chroma-medium-gray-fg: #75715e;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -408,12 +422,16 @@ html {
                     }
                 }
 
-                pre {
-                    border: 0.1rem solid var(--border-color);
-                    overflow-x: scroll;
+                div.highlight {
+                    @import "./code.scss";
 
-                    margin: 0.5rem;
-                    padding: 0.5rem;
+                    pre {
+                        border: 0.1rem solid var(--border-color);
+                        overflow-x: scroll;
+
+                        margin: 0.5rem;
+                        padding: 0.5rem;
+                    }
                 }
 
                 div.models3d div.model3d model-viewer {
