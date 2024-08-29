@@ -352,11 +352,13 @@ html {
                 h3,
                 h4,
                 div,
+                ul,
+                ol,
                 p {
                     margin-top: 1rem;
                     margin-bottom: 1rem;
 
-                    >code {
+                    code {
                         background: var(--code-background-color);
                         color: var(--code-foreground-color);
                         padding: 0.125rem;

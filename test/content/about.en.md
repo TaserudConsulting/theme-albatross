@@ -17,7 +17,7 @@ Internal links test: [Start page](/en), [Bad page](/en/foobar)
   voluptatem sit voluptas. Est tenetur libero repellat beatae.
 - Ut ullam itaque aperiam necessitatibus nihil. Id nesciunt in
   provident reprehenderit. Rerum perspiciatis laudantium molestias
-  voluptatem sit voluptas. Est tenetur libero repellat beatae.
+  voluptatem sit voluptas. Est tenetur libero `repellat` beatae.
 
 ### Heading level 3: Numeric list
 1. Sit inventore corrupti corporis voluptate. Cumque deleniti officia
@@ -30,7 +30,7 @@ Internal links test: [Start page](/en), [Bad page](/en/foobar)
    voluptates.
 3. Sit inventore corrupti corporis voluptate. Cumque deleniti officia
    doloribus reprehenderit iste. Minus consectetur facere deleniti eum
-   est aut quo tempore. Tempore maiores commodi est porro reiciendis
+   est aut quo tempore. Tempore maiores commodi est 'porro' reiciendis
    voluptates.
 
 #### Heading level 4: Block quotes
