@@ -22,6 +22,6 @@ jobs:
       - run: 'nix flake check'
       - run: 'nix build .#theme'
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: 'cron(flake): Update inputs'
