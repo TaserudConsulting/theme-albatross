@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 # Mark @TaserudConsulting/Everyone as codeowner for the entire repository
 * @TaserudConsulting/Everyone
+=======
++# Mark @TaserudConsulting/Everyone as codeowner for the entire repository
++@TaserudConsulting/Everyone
+>>>>>>> fced314 (fix(.github): Migrate from dependabot reviewers to CODEOWNERS and remove magic nix cache)
