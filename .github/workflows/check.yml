@@ -9,12 +9,11 @@ name: Check
 jobs:
   format:
     name: File formatting
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
       - uses: DeterminateSystems/nix-installer-action@v17
-      - uses: DeterminateSystems/magic-nix-cache-action@v9
 
       - run: 'nix fmt . -- --check'
       - run: 'nix run nixpkgs#yamllint -- --strict --format github .'
@@ -23,12 +22,11 @@ jobs:
 
   check:
     name: Check flake
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
 
       - uses: DeterminateSystems/nix-installer-action@v17
-      - uses: DeterminateSystems/magic-nix-cache-action@v9
 
       - run: 'nix flake check'
       - run: 'nix build .#theme'
