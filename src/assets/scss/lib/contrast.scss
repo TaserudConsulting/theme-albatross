@@ -1,3 +1,4 @@
+@use "sass:color";
 @import "math";
 
 /**
@@ -73,9 +74,9 @@ $linearChannelValues: ();
         // background and too little contrast. Then we we make the color darker.
         @if (($isDarkBg and $contrast > $maxContrast) or
              (not $isDarkBg and $contrast < $minContrast)) {
-            $fg: darken($fg, abs($minContrast - $contrast));
+            $fg: color.scale($fg, $lightness: -5%);
         } @else { // Otherwise we make it lighter.
-            $fg: lighten($fg, abs($minContrast - $contrast));
+            $fg: color.scale($fg, $lightness: 5%);
         }
 
         // And recalculate the contrast.
