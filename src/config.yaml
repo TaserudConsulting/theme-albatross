@@ -1,6 +1,6 @@
 ---
 baseURL: /
-title: Albatross theme - Taserud Consulting AB
+title: Albatross theme - Elis Hirwing
 defaultContentLanguage: sv
 theme: albatross
 
@@ -10,7 +10,7 @@ markup:
     noClasses: false
 
 params:
-  copyrightOwner: 2022 Elis Hirwing, 2023 Taserud Consulting AB
+  copyrightOwner: 2022 Elis Hirwing
 
   # Extra head content to render within the <head> tag
   extraHeadContent: ''

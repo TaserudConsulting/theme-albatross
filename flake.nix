@@ -1,10 +1,10 @@
 {
-  description = "Taserud Consulting AB Theme: Albatross";
+  description = "Elis Hugo Theme: Albatross";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     flake-utils.url = "flake-utils";
-    web-iso-flags.url = "github:TaserudConsulting/web-iso-flags";
+    web-iso-flags.url = "github:etu/web-iso-flags";
     web-iso-flags.inputs.flake-utils.follows = "flake-utils";
   };
 
@@ -39,7 +39,7 @@
 
       # Expose the theme files.
       theme = pkgs.stdenv.mkDerivation {
-        name = "taserud-consulting-ab--theme-albatross";
+        name = "theme-albatross";
         passthru.theme-name = "albatross";
 
         src = ./src;
@@ -95,7 +95,7 @@
 
     # A test case to see that the theme builds.
     checks.test = pkgs.stdenv.mkDerivation {
-      name = "taserud-consulting-ab-theme-albatross-test";
+      name = "theme-albatross-test";
 
       src = ./.;
 

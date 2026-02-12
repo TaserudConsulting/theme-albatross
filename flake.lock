@@ -77,15 +77,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1770597483,
-        "narHash": "sha256-AyFYNCuk4zlXLTsYpHpuvAtfQqj5NcBzxrzhlzG3+y4=",
-        "owner": "TaserudConsulting",
+        "lastModified": 1770922995,
+        "narHash": "sha256-yv/xjl3C5TmGtrkBGnZxECwSe/YlMVMrmn6s8ALRqQk=",
+        "owner": "etu",
         "repo": "web-iso-flags",
-        "rev": "c4eb377bcee4960a9ae9619ef709fc58a14a8089",
+        "rev": "8c7f0cbc96a886c4cbfbd55ebc1659d38a571ebd",
         "type": "github"
       },
       "original": {
-        "owner": "TaserudConsulting",
+        "owner": "etu",
         "repo": "web-iso-flags",
         "type": "github"
       }

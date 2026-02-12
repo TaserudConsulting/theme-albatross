@@ -1,9 +1,9 @@
-[![Check](https://github.com/TaserudConsulting/theme-albatross/actions/workflows/check.yml/badge.svg)](https://github.com/TaserudConsulting/theme-albatross/actions/workflows/check.yml)
-[![Update](https://github.com/TaserudConsulting/theme-albatross/actions/workflows/update.yml/badge.svg)](https://github.com/TaserudConsulting/theme-albatross/actions/workflows/update.yml)
+[![Check](https://github.com/etu/hugo-theme-albatross/actions/workflows/check.yml/badge.svg)](https://github.com/etu/hugo-theme-albatross/actions/workflows/check.yml)
+[![Update](https://github.com/etu/hugo-theme-albatross/actions/workflows/update.yml/badge.svg)](https://github.com/etu/hugo-theme-albatross/actions/workflows/update.yml)
 
-# Taserud Consulting AB Theme: Albatross
+# Hugo theme: Albatross
 
-This is a hugo theme for Taserud Consulting AB. It's quite flexible.
+This is a hugo theme. It's quite flexible.
 
 ## Features
 
